@@ -9,8 +9,6 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
-import javafx.scene.shape.Path;
-
 public class ReadBigFile {
 	
 	public static void main (String args[])
