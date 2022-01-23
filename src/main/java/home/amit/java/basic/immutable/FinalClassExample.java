@@ -8,9 +8,8 @@ Make all mutable fields final so that it’s value can be assigned only once.
 Initialize all the fields via a constructor performing deep copy.
 Perform cloning of objects in the getter methods to return a copy rather 
 than returning the actual object reference.
- * 
- * 
- * 
+* Create defensive copies while creating and getting mutable objects
+
  * 
  */
 
@@ -55,7 +54,7 @@ public final class FinalClassExample {
 		System.out.println("Performing Deep  for Object initialization");
 		this.id=i;
 		this.name=n;
-		HashMap<String,String> tempMap=new HashMap<String,String>();
+		var tempMap=new HashMap<String,String>();
 //		String key;
 //		Iterator<String> it = hm.keySet().iterator();
 //		while(it.hasNext()){
