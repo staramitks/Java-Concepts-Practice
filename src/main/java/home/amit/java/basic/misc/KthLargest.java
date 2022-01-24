@@ -7,7 +7,7 @@ public class KthLargest {
 	
 	
 	 public static void main(String[] args) {
-	        int[] array = new int[] {4, 10, 3, 5, 1};
+	        int[] array = new int[] {4, 10, 3, 5, 1,11,12,13,14,15,161,70};
 	        System.out.println(new KthLargest().findKthLargest(array, 2));
 	    }
 	 

@@ -6,7 +6,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 /*
  * Duplicates not allowed
- * sorted as per natual sorting
+ * sorted as per natural sorting
  * 	 or by comparator provided at run time 
  * 	  or via comparable interface
  * Cannot contain null value
