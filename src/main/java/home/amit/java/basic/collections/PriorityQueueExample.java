@@ -33,6 +33,7 @@ public class PriorityQueueExample {
 		employees.stream().forEach(e->System.out.println(e.getAge()));
 		employees.stream().forEach(e->empPriorityQueue.add(e));
 		System.out.println("Length is "+empPriorityQueue.size());
+		empPriorityQueue.forEach(e-> System.out.println(e.getAge()));
 		System.out.println("Top element is "+empPriorityQueue.peek().getAge());
 		empPriorityQueue.poll();
 		System.out.println("Second element is "+empPriorityQueue.peek().getAge());

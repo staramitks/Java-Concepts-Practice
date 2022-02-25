@@ -18,6 +18,14 @@ public class TestDummyMap {
         System.out.println(employeeMap);
         //prints first object's key and last value
 
+        Map<Integer, Integer> map = new HashMap<>();
+
+        map.put(1,1);
+        map.put(1,2);
+        map.put(1,3);
+
+        System.out.println(map);
+
 
 
     }

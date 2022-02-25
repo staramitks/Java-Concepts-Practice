@@ -17,6 +17,7 @@ public class KthLargest {
 	            q.offer(i);
 	 
 	            if (q.size() > k) {
+					System.out.println("Removing "+q.peek());
 	                q.poll();
 	            }
 	        }
