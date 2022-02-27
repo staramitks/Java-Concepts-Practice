@@ -52,8 +52,8 @@ public class AnotherProducerConsumerExample
 		t2.start(); 
 
 		// t1 finishes before t2 
-		t1.join(); 
-		t2.join(); 
+//		t1.join();
+//		t2.join();
 	} 
 
 	// This class has a list, producer (adds items to list 
@@ -63,7 +63,7 @@ public class AnotherProducerConsumerExample
 		// Create a list shared by producer and consumer 
 		// Size of list is 2. 
 		LinkedList<Integer> list = new LinkedList<>(); 
-		int capacity = 2; 
+		int capacity = 1;
 
 		// Function called by producer thread 
 		public void produce() throws InterruptedException 
@@ -90,7 +90,7 @@ public class AnotherProducerConsumerExample
 
 					// makes the working of program easier 
 					// to understand 
-					Thread.sleep(1000); 
+				//	Thread.sleep(1000);
 				} 
 			} 
 		} 
@@ -117,7 +117,7 @@ public class AnotherProducerConsumerExample
 					notify(); 
 
 					// and sleep 
-					Thread.sleep(1000); 
+				//	Thread.sleep(1000);
 				} 
 			} 
 		} 

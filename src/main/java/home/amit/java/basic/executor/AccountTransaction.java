@@ -22,17 +22,24 @@ public class AccountTransaction {
 			 
 			 System.out.println("Less balance so holding withdrawal now...");
 			try{
-			 this.wait();
+				System.out.println("Waiting for 5 seconds for balance to be updated");
+			 this.wait(5000);
+				if (account.getBalance()<amount){
+					System.out.println("ERROR => INSUFFICIENT BALANCE");
+				}
+				else
+				{
+					account.setBalance(account.getBalance()-amount);
+					System.out.println("Allowing withdrawal now...");
+				}
 			}
 			 catch (InterruptedException e) {
+				 System.out.println("Exception encountered while waiting for amount to be credited "+e);
 					e.printStackTrace();
 				}
 			
 		 }
-		
-			System.out.println("Allowing withdrawal now...");
-			account.setBalance(account.getBalance()-amount);
-			notifyAll();
+		notifyAll();
 	}
 	
 	public synchronized void deposit ( long amount )

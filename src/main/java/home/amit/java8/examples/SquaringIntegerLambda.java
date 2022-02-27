@@ -19,7 +19,7 @@ public class SquaringIntegerLambda {
 		List<Integer> sqrdList=intList.parallelStream()
 									  .map(x->x*x)
 									  .collect(Collectors.toList());
-		
+
 		System.out.println("Squared List");
 		sqrdList.forEach(x->System.out.print(x+","));
 		

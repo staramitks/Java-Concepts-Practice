@@ -2,10 +2,10 @@ package home.amit.java8.multithreading;
 /*
  * 
  * Drawback of using synchronization in java
- * it can introdue thread contention, it can occur when two or more threads try to 
+ * it can introduce thread contention, it can occur when two or more threads try to
  * access the same resource simultaneously 
  * and cause java runtime to execute one or more threads slowly 
- * Thread Starvation and livelock are forms of thead contention
+ * Thread Starvation and livelock are forms of thread contention
  * 
  * 
  * 
@@ -37,12 +37,10 @@ class Counter  implements Runnable{
     	synchronized(this)
     	{
         this.increment();
-        System.out.println("Value for Thread After increment " 
-        + Thread.currentThread().getName() + " " + this.getValue());
+        System.out.println(Thread.currentThread().getName() + " -> " + this.getValue());
         //decrementing
         this.decrement();
-        System.out.println("Value for Thread at last " 
-        + Thread.currentThread().getName() + " " + this.getValue());      
+        System.out.println(Thread.currentThread().getName() + " -> " + this.getValue());
     	}
     }
 }

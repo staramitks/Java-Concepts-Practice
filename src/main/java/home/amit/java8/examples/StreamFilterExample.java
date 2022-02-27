@@ -9,12 +9,10 @@ public class StreamFilterExample {
 	
 	public static void main (String args[])
 	{
-		
 		List<String> myList= new ArrayList<>();
 		myList.add("FirstName");
 		myList.add("Second Name");
-		
-		
+
 		myList.stream().filter(s->{
 			System.out.println("Printing for "+s);
 			return true;

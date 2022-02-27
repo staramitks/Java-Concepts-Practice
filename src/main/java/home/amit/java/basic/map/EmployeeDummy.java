@@ -43,6 +43,15 @@ public class EmployeeDummy {
     }
 
     @Override
+    public String toString() {
+        return "EmployeeDummy{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o)
     {
         return true;

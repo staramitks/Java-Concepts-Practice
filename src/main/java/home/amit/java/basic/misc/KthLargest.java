@@ -3,6 +3,10 @@ package home.amit.java.basic.misc;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+
+// In PriorityQueue by default bigger number will come first
+
+
 public class KthLargest {
 	
 	
@@ -11,9 +15,9 @@ public class KthLargest {
 	        System.out.println(new KthLargest().findKthLargest(array, 2));
 	    }
 	 
-	    public int findKthLargest(int[] nums, int k) {
-	        Queue<Integer> q = new PriorityQueue<Integer>(k);
-	        for (int i : nums) {
+	    public int findKthLargest(int[] numbs, int k) {
+	        Queue<Integer> q = new PriorityQueue<>(k);
+	        for (int i : numbs) {
 	            q.offer(i);
 	 
 	            if (q.size() > k) {

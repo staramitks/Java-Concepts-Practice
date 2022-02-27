@@ -28,7 +28,7 @@ public class GroupByExample {
 		cityGroupConcurrentMap.keySet().stream().forEach(System.out::println);
 		
 		
-		System.out.println("Gourping by average age");
+		System.out.println("Grouping by average age");
 		
 				ConcurrentMap<String, Double> collectDblMap = employeesList.parallelStream().collect(groupingByConcurrent(EmployeeDTO::getCity,averagingInt(EmployeeDTO::getAge)));
 				collectDblMap.keySet().stream().forEach(System.out::println);

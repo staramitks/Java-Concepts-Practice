@@ -11,7 +11,7 @@ public class KthLargestTreeSet {
 	    }
 	 
 	    public int findKthLargest(int[] nums, int k) {
-	        TreeSet tset = new TreeSet<Integer>();
+	        var tset = new TreeSet<Integer>();
 	        for (int i : nums) {
 				tset.add(i);
 	        }
@@ -20,6 +20,7 @@ public class KthLargestTreeSet {
 	        int count=0;
 	        int result=Integer.MIN_VALUE;
 			final Iterator iterator = tset.iterator();
+			System.out.println("Before "+tset);
 	        while (iterator.hasNext())
 			{
 				count++;

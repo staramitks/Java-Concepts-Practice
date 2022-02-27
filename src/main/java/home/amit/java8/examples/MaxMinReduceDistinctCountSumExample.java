@@ -18,41 +18,36 @@ public class MaxMinReduceDistinctCountSumExample {
 	{
 		Optional<Integer> minVal = testList.stream().reduce(Integer::min);
 		System.out.println("Min Val is "+minVal.get());
-		return 0;
+		return minVal.get();
 	}
 
-	public int getReduce()
+	public int getSum()
 	{
 		Optional<Integer> sumVal = testList.stream().reduce(Integer::sum);
 		System.out.println("Sum Val is "+sumVal.get());
-		return 0;
+		return sumVal.get();
 	}
 
-	public int getDistinct()
+	public long getDistinct()
 	{
 		long count = testList.parallelStream()
 				.distinct()
 				.count();
 		
 		System.out.println("Distinct Count is "+count);
-		return 0;
+		return count;
 	}
 
-	public int getCount()
+	public long getCount()
 	{
 		long count = testList.parallelStream()
 				.count();
 		System.out.println("total Count is "+count);
 		
-		return 0;
+		return count;
 	}
 
-	public int getSum()
-	{
-		return 0;
-	}
 
-	
 	public static void main (String... args)
 	{
 		MaxMinReduceDistinctCountSumExample lMaxMinReduceDistinctCountSumExample= new MaxMinReduceDistinctCountSumExample();
@@ -61,6 +56,6 @@ public class MaxMinReduceDistinctCountSumExample {
 		lMaxMinReduceDistinctCountSumExample.getMin();
 		lMaxMinReduceDistinctCountSumExample.getSum();
 		lMaxMinReduceDistinctCountSumExample.getDistinct();
-		lMaxMinReduceDistinctCountSumExample.getReduce();
+		lMaxMinReduceDistinctCountSumExample.getSum();
 	}
 }
