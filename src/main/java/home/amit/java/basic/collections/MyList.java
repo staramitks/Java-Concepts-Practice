@@ -13,10 +13,9 @@ public class MyList<E> extends ArrayList<E> {
 	@Override
 	public boolean add(E element)
 	{
+		super.add(element);
 		boolean b=false;
-		
 		ensureCapacity(10);
-
 		return b;
 		
 	}
