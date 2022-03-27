@@ -8,20 +8,20 @@ public class TCPExample {
     public static void main(String[] args) throws Exception{
 
         int c;
-        try(Socket s= new Socket("whois.internic.net",43)){
+        try(Socket s= new Socket("whois.internic.net",43)) {
 
-        InputStream inputStream= s.getInputStream();
-        OutputStream outputStream =s.getOutputStream();
+            InputStream inputStream = s.getInputStream();
+            OutputStream outputStream = s.getOutputStream();
 
-        String str=(args.length==0? "OraclePressBooks.com" :args[0])+"\n";
-        byte buf[]=str.getBytes();
-        outputStream.write(buf);
+            String str = (args.length == 0 ? "OraclePressBooks.com" : args[0]) + "\n";
+            byte buf[] = str.getBytes();
+            outputStream.write(buf);
 
-        while ((c = inputStream.read() )!= -1 ){
-            System.out.println((char) c);
+            while ((c = inputStream.read()) != -1) {
+                System.out.println((char) c);
+            }
+
         }
-
-
 
     }
 }
