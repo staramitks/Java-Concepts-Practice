@@ -89,6 +89,35 @@ public class DataProvider {
 		
 		
 	}
+
+
+	public static List<Integer> getIntList(){
+
+		List<Integer> list= new ArrayList<>();
+		list.add(500);
+		list.add(1);
+		list.add(12);
+		list.add(1333);
+		list.add(13);
+		list.add(12);
+		list.add(14);
+		list.add(15);
+		list.add(16);
+		list.add(133);
+		list.add(132);
+		list.add(15435);
+		list.add(15767);
+		list.add(14532);
+		list.add(31);
+		list.add(54541);
+		list.add(154543);
+		list.add(156547);
+		list.add(3451);
+		list.add(999999999);
+		list.add(5781);
+
+		return list;
+	}
 	
 
 }
