@@ -1,7 +1,7 @@
 package home.amit.java.basic.exceptionHandling.unchecked;
 
 
-import home.amit.java8.defaultexamples.C;
+import home.amit.java.defaultexamples.C;
 
 import java.util.ArrayList;
 
