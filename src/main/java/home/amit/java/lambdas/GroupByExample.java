@@ -19,7 +19,7 @@ public class GroupByExample {
 		EmployeeDTO emp= new EmployeeDTO();
 		List<EmployeeDTO> employeesList = emp.getEmployeesList();
 
-		Map<String,List<EmployeeDTO>> cityGroupMap= new HashMap<>();
+		Map<String,List<EmployeeDTO>> cityGroupMap;
 
 		cityGroupMap=employeesList.stream().collect(Collectors.groupingBy(EmployeeDTO::getCity));
 		cityGroupMap.keySet().stream().forEach(System.out::println);

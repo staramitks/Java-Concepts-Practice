@@ -4,6 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+/*
+* Good for converting from List<List<Integer>> to List<Integer>
+list.stream().flatMap(list->list.stream()).collect(Collectors.toList())
+*
+* */
 public class MapFlatMapExample {
 	public static void main (String args[])
 	{

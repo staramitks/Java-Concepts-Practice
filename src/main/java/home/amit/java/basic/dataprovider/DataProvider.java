@@ -1,5 +1,6 @@
 package home.amit.java.basic.dataprovider;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -118,6 +119,15 @@ public class DataProvider {
 
 		return list;
 	}
-	
+
+
+	public static int[] getArray()
+	{
+
+		int[] array=new int[]{2,13,1,45,23,13,41,41,11,33,11,5,6,3,56,7,43,6,76,4,54};
+		return array;
+
+
+	}
 
 }
