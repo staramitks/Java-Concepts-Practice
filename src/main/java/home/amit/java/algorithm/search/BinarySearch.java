@@ -1,4 +1,4 @@
-package home.amit.java.algorithm;
+package home.amit.java.algorithm.search;
 
 import java.util.ArrayList;
 import java.util.List;

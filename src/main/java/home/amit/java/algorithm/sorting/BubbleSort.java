@@ -1,4 +1,4 @@
-package home.amit.java.algorithm;
+package home.amit.java.algorithm.sorting;
 
 import home.amit.java.basic.dataprovider.DataProvider;
 
