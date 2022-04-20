@@ -67,6 +67,77 @@ public class TraversalCircularLinkedList {
 
     }
 
+    public void splitCircularList(Node head)
+    {
+        // find length of list
+        // Divide length by 2 and split list after n iterations.
+        // for next elements join first and last element
+
+        Node firstHead=head;
+
+        if (head == null || head.next==null)
+        {
+            return;
+        }
+
+        Node current=head;
+        current=current.next;
+        int length=1;
+        while(current!=head)
+        {
+            System.out.print(" "+current.data);
+            current=current.next;
+            length++;
+        }
+        System.out.println("Length is "+length);
+        int mid=length/2;
+
+        Node first=head;
+        int midCounter=1;
+        Node prevNode=null;
+        while(midCounter<=mid)
+        {
+            prevNode=first;
+            first=first.next; //20,30,40,50
+            midCounter++;
+
+        }
+        Node secondHead=first; //50->60
+        Node currentSecond=secondHead; //50->60
+        prevNode.next=firstHead; // 50->10
+
+
+        int secondLength=length-mid;
+        Node prevPos=null;
+        while (currentSecond!=head)
+        {
+            prevPos=currentSecond;
+            currentSecond=currentSecond.next;
+        }
+
+        prevPos.next=first;
+
+        printNodes(firstHead);
+        printNodes(secondHead);
+
+
+
+
+    }
+
+    public void printNodes(Node node)
+    {
+        Node temp=node;
+        int matchCount=0;
+        do{
+            System.out.println(temp.data);
+            temp=temp.next;
+        }
+        while (node!=temp );
+
+
+
+    }
 
 
     public static void main(String[] args) {
@@ -81,6 +152,7 @@ public class TraversalCircularLinkedList {
         TraversalCircularLinkedList.push(node, 50);
         TraversalCircularLinkedList.push(node, 60);
         traversalCircularLinkedList.traverseList(node);
+        traversalCircularLinkedList.splitCircularList(node);
 
     }
 }
