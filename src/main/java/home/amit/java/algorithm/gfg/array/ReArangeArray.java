@@ -1,4 +1,4 @@
-package home.amit.java.algorithm.gfg;
+package home.amit.java.algorithm.gfg.array;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,10 +1,5 @@
-package home.amit.java.algorithm.gfg;
+package home.amit.java.algorithm.gfg.array;
 
-import home.amit.java.basic.dataprovider.DataProvider;
-
-import javax.xml.crypto.Data;
-import java.lang.reflect.Array;
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class RotateArray {
