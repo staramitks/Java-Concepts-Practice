@@ -52,6 +52,21 @@ public class LinkedList {
         }
         return head;
     }
+    public void deleteKeyRecursiverly(Node node, int data)
+    {
+
+        if (node.data==data)
+        {
+            node=node.next;
+            return;
+        }
+
+        Node temp=node.next;
+        deleteKeyRecursiverly(temp,data);
+
+        return ;
+    }
+
 
 
     public static void main(String[] args) {
@@ -79,16 +94,31 @@ public class LinkedList {
          currentNode=list.head;
         while (currentNode!=null)
         {
-            System.out.println(currentNode.data);
+            System.out.print(" , " +currentNode.data);
             currentNode=currentNode.next;
 
         }
-
+        System.out.println("");
+        System.out.println((" ==================== "));
+        System.out.println("");
         list.deleteKey(25);
         currentNode=list.head;
         while (currentNode!=null)
         {
-            System.out.println(currentNode.data);
+            System.out.print(" , " +currentNode.data);
+            currentNode=currentNode.next;
+
+        }
+
+        System.out.println("");
+        System.out.println((" ==================== "));
+        System.out.println("");
+
+        list.deleteKeyRecursiverly(list.head, 30);
+        currentNode=list.head;
+        while (currentNode!=null)
+        {
+            System.out.print(" , " +currentNode.data);
             currentNode=currentNode.next;
 
         }
