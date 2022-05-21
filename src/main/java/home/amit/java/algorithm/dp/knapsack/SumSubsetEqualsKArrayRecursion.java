@@ -1,4 +1,4 @@
-package home.amit.java.dp.knapsack;
+package home.amit.java.algorithm.dp.knapsack;
 
 import java.util.Arrays;
 import java.util.List;

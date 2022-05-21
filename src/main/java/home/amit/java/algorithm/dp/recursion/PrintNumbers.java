@@ -1,4 +1,4 @@
-package home.amit.java.dp.recursion;
+package home.amit.java.algorithm.dp.recursion;
 
 public class PrintNumbers {
 

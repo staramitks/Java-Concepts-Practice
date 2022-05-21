@@ -1,7 +1,4 @@
-package home.amit.java.dp.knapsack;
-
-import java.util.Arrays;
-import java.util.List;
+package home.amit.java.algorithm.dp.knapsack;
 
 public class SumSubsetEqualsKArrayMemoization {
 
