@@ -32,24 +32,16 @@ public class MergeSort {
         {
             if (leftArray[i] < rightArray[j])
             {
-                resultArray[k]=leftArray[i];
-                k++;
-                i++;
+                resultArray[k++]=leftArray[i++];
             }
             else if (leftArray[i] > rightArray[j])
             {
-                resultArray[k]=rightArray[j];
-                 k++;
-                 j++;
+                resultArray[k++]=rightArray[j++];
             }
             else
             {
-                resultArray[k]=leftArray[i];
-                i++;
-                k++;
-                resultArray[k]=rightArray[j];
-                k++;
-                j++;
+                resultArray[k++]=leftArray[i++];
+                resultArray[k++]=rightArray[j++];
             }
         }
 

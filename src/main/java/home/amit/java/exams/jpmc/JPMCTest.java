@@ -1,4 +1,4 @@
-package home.amit.java.exams;
+package home.amit.java.exams.jpmc;
 
 import java.util.Arrays;
 import java.util.List;
