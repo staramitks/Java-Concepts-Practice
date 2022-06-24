@@ -5,10 +5,10 @@ public class SumSubsetEqualsKArrayMemoization {
         static int subsetSum(int a[], int n, int sum)
         {
             // Storing the value -1 to the matrix
-            int tab[][] = new int[n + 1][sum + 1];
+            int dp[][] = new int[n + 1][sum + 1];
             for (int i = 1; i <= n; i++) {
                 for (int j = 1; j <= sum; j++) {
-                    tab[i][j] = -1;
+                    dp[i][j] = -1;
                 }
             }
 
@@ -24,14 +24,14 @@ public class SumSubsetEqualsKArrayMemoization {
 //            // already call the function
 //            // with the same value.
 //            // it will save our from the repetition.
-            if (tab[n - 1][sum] != -1)
-                return tab[n - 1][sum];
+            if (dp[n - 1][sum] != -1)
+                return dp[n - 1][sum];
 //
 //            // if the value of a[n-1] is
 //            // greater than the sum.
 //            // we call for the next value
             if (a[n - 1] > sum)
-                return tab[n - 1][sum]
+                return dp[n - 1][sum]
                         = subsetSum(a, n - 1, sum);
             else {
 
@@ -40,10 +40,10 @@ public class SumSubsetEqualsKArrayMemoization {
                 // full-fill our criteria
                 // that's why we doing two calls
                 if ( subsetSum(a, n - 1, sum) != 0 || subsetSum(a, n - 1, sum - a[n - 1])!= 0) {
-                    return tab[n - 1][sum] = 1;
+                    return dp[n - 1][sum] = 1;
                 }
                 else
-                    return tab[n - 1][sum] = 0;
+                    return dp[n - 1][sum] = 0;
             }
         }
 
