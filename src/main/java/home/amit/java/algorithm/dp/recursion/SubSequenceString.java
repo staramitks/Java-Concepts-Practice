@@ -5,7 +5,7 @@ public class SubSequenceString {
 
     static void powerSet(String input, int index, String curr)
     {
-        System.out.println("Calling for index "+index);
+       // System.out.println("Calling for index "+index);
         int n = input.length();
 
         // base case
@@ -22,7 +22,7 @@ public class SubSequenceString {
         // character as part of current
         // subset
         powerSet(input, index + 1, curr + input.charAt(index));
-        System.out.println( " Second call for index "+index);
+        //System.out.println( " Second call for index "+index);
         powerSet(input, index + 1, curr);
 
 
@@ -31,7 +31,7 @@ public class SubSequenceString {
     }
 
     public static void main(String[] args) {
-        String str = "ab";
+        String str = "abc";
         int index = 0;
         String curr="";
         powerSet(str,index,curr);

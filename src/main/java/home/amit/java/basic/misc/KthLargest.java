@@ -4,7 +4,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 
-// In PriorityQueue by default bigger number will come first
+// In PriorityQueue by default smaller number will come first and will be removed first just like a normal queue/
+// It uses Heap Data Structure - The head of this queue is the least element with respect to the specified ordering
 
 
 public class KthLargest {
@@ -13,6 +14,7 @@ public class KthLargest {
 	 public static void main(String[] args) {
 	        int[] array = new int[] {4, 10, 3, 5, 1,11,12,13,14,15,161,70};
 	        System.out.println(new KthLargest().findKthLargest(array, 2));
+	        System.exit(0);
 	    }
 	 
 	    public int findKthLargest(int[] numbs, int k) {
