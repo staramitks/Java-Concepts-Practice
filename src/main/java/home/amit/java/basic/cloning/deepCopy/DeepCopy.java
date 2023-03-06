@@ -1,7 +1,6 @@
 package home.amit.java.basic.cloning.deepCopy;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 class Student implements Cloneable
 {
@@ -24,9 +23,9 @@ class Student implements Cloneable
 //        student.course = (Course) course.clone();
         // Option 2
         Course clonedCourse =new Course(this.course.subject1,this.course.subject2,this.course.subject3);
-        LocalDate cloneddob= LocalDate.of(student.dob.getYear(),student.dob.getMonthValue(),student.dob.getDayOfMonth());
+        LocalDate cloned= LocalDate.of(student.dob.getYear(),student.dob.getMonthValue(),student.dob.getDayOfMonth());
         student.course=clonedCourse;
-        student.dob=cloneddob;
+        student.dob=cloned;
         return student;
     }
 
