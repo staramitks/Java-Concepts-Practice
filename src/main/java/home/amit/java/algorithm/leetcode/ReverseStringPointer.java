@@ -21,9 +21,10 @@ public class ReverseStringPointer {
 
     public static void main(String[] args) {
         String inputStr="AmitSingh";
+        System.out.println(inputStr);
         char[] chars = inputStr.toCharArray();
         ReverseStringPointer lreverseString= new ReverseStringPointer();
         lreverseString.reverseString(chars);
-        System.out.print(chars);
+        System.out.println(chars);
     }
 }

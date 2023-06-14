@@ -1,6 +1,7 @@
 package home.amit.java.basic.strings;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class Isomorophic {
@@ -61,7 +62,49 @@ public class Isomorophic {
 
     public static void main(String[] args) {
         Isomorophic isomorophic= new Isomorophic();
-        boolean result=isomorophic.isIsomorphic("POLO","MONO");
+        boolean result=isomorophic.isIsomorphicTest("POLO","MONO");
         System.out.println(result);
+    }
+
+
+    public boolean isIsomorphicTest(String s1, String s2)
+    {
+        Map<String,Integer> vowelsMap= new HashMap<>();
+        vowelsMap.put("A",1);
+        vowelsMap.put("E",2);
+        vowelsMap.put("I",3);
+        vowelsMap.put("O",4);
+        vowelsMap.put("U",5);
+        s1=s1.toUpperCase(Locale.ROOT);
+        s2=s2.toUpperCase(Locale.ROOT);
+        char[] chars = s1.toCharArray();
+        char[] chars2 = s2.toCharArray();
+        StringBuffer s1Unique=new StringBuffer("");
+        StringBuffer s2Unique=new StringBuffer("");
+        for (int i=0;i<chars.length;i++)
+        {
+            String s=String.valueOf(chars[i]);
+            s1Unique.append(getNumberInStr(vowelsMap,s));
+        }
+        for (int i=0;i<chars2.length;i++)
+        {
+            String s=String.valueOf(chars2[i]);
+            s2Unique.append(getNumberInStr(vowelsMap,s));
+        }
+        if (s1Unique.toString().equals(s2Unique.toString()))
+        {
+            return true;
+        }
+        return false;
+    }
+
+
+    public String getNumberInStr(Map<String,Integer> vowelsMap, String Val)
+    {
+        if (vowelsMap.containsKey(Val))
+        {
+            return String.valueOf(vowelsMap.get(Val));
+        }
+        return "X";
     }
 }

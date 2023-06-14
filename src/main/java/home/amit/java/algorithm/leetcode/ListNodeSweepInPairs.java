@@ -51,9 +51,15 @@ class Solution {
 public class ListNodeSweepInPairs {
 
     public static void main(String[] args) {
-        ListNode node=new ListNode(10, new ListNode(20, new ListNode(30,new ListNode(40))));
+        ListNode head=new ListNode(10, new ListNode(20, new ListNode(30,new ListNode(40))));
+        ListNode node=head;
+        while (node!=null)
+        {
+            System.out.println(node.val);
+            node=node.next;
+        }
         Solution solution= new Solution();
-        solution.swapPairs(node);
+        solution.swapPairs(head);
     }
 
 }
