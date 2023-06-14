@@ -3,7 +3,6 @@ package home.amit.java.basic.misc;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class TestIterator {
 
@@ -17,13 +16,13 @@ public class TestIterator {
 
         Iterator<Integer> it = list.iterator();
         list.add(50);
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             System.out.print(it.next() + " ");
         }
         System.out.println("After adding");
 
         it = list.iterator();
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             System.out.print(it.next() + " ");
         }
     }

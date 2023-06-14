@@ -2,7 +2,6 @@ package home.amit.java.algorithm.gfg.array;
 
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 
 /*
 
@@ -16,22 +15,16 @@ https://www.geeksforgeeks.org/rearrange-array-arri/?ref=lbp
 public class ReArangeArray {
 
 
-    public static void reArrangeArray(int[] array)
-    {
-        var set= new HashSet<Integer>();
-        for (int i=0;i<array.length ;i++)
-        {
+    public static void reArrangeArray(int[] array) {
+        var set = new HashSet<Integer>();
+        for (int i = 0; i < array.length; i++) {
             set.add(array[i]);
         }
-        for (int k=0;k< set.size(); k++)
-        {
-            if (set.contains(k))
-            {
-                array[k]=k;
-            }
-            else
-            {
-                array[k]=-1;
+        for (int k = 0; k < set.size(); k++) {
+            if (set.contains(k)) {
+                array[k] = k;
+            } else {
+                array[k] = -1;
             }
 
         }
@@ -41,10 +34,9 @@ public class ReArangeArray {
 
     public static void main(String[] args) {
 
-        int[] myArray= {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1};
+        int[] myArray = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1};
         reArrangeArray(myArray);
         System.out.println(Arrays.toString(myArray));
-
 
 
     }

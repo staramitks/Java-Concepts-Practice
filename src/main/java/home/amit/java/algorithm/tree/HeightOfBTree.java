@@ -2,29 +2,26 @@ package home.amit.java.algorithm.tree;
 
 import home.amit.java.algorithm.common.BTreeNode;
 import home.amit.java.algorithm.common.BinaryTree;
-import home.amit.java.defaultexamples.B;
 
 public class HeightOfBTree {
 
     public static void main(String[] args) {
-        BinaryTree binaryTree= new BinaryTree();
-        BTreeNode btree=binaryTree.getBTree();
-        HeightOfBTree heightOfBTree= new HeightOfBTree();
+        BinaryTree binaryTree = new BinaryTree();
+        BTreeNode btree = binaryTree.getBTree();
+        HeightOfBTree heightOfBTree = new HeightOfBTree();
         int height = heightOfBTree.getHeight(btree);
-        System.out.println(("Height is "+height));
+        System.out.println(("Height is " + height));
     }
 
     private int getHeight(BTreeNode btree) {
 
 
-        if (btree==null)
-        {
+        if (btree == null) {
             return 0;
         }
 
-        int height=1+Integer.max(getHeight(btree.left), getHeight(btree.right));
+        int height = 1 + Integer.max(getHeight(btree.left), getHeight(btree.right));
         return height;
-
 
 
     }

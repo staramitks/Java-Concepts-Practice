@@ -11,6 +11,7 @@ public class TestVariable {
     }
 
     public int number = 3;
+
     {
         number = 4;
     }

@@ -1,12 +1,13 @@
 package home.amit.java.exams.bloomberg;
 
-public  abstract class  Person {
+public abstract class Person {
 
     String name;
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 
-    public abstract void  getProps();
+    public abstract void getProps();
 
 }

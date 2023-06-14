@@ -1,47 +1,43 @@
 package home.amit.java.lambdas;
 
-import home.amit.java.lambdas.EmployeeDTO;
-
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
+
 import static java.util.stream.Collectors.averagingInt;
-import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.groupingByConcurrent;
 
 public class GroupByExample {
-	
-	public static void main (String... args)
-	{
-		
-		EmployeeDTO emp= new EmployeeDTO();
-		List<EmployeeDTO> employeesList = emp.getEmployeesList();
 
-		Map<String,List<EmployeeDTO>> cityGroupMap;
+    public static void main(String... args) {
 
-		cityGroupMap=employeesList.stream().collect(Collectors.groupingBy(EmployeeDTO::getCity));
-		cityGroupMap.keySet().stream().forEach(System.out::println);
+        EmployeeDTO emp = new EmployeeDTO();
+        List<EmployeeDTO> employeesList = emp.getEmployeesList();
 
+        Map<String, List<EmployeeDTO>> cityGroupMap;
 
-		System.out.println("Parallel Stream");
-		Map<String,List<EmployeeDTO>> cityGroupConcurrentMap= employeesList.parallelStream().collect(Collectors.groupingByConcurrent(EmployeeDTO::getCity));;
-		cityGroupConcurrentMap.keySet().stream().forEach(System.out::println);
+        cityGroupMap = employeesList.stream().collect(Collectors.groupingBy(EmployeeDTO::getCity));
+        cityGroupMap.keySet().stream().forEach(System.out::println);
 
 
-		System.out.println("Grouping by average age");
+        System.out.println("Parallel Stream");
+        Map<String, List<EmployeeDTO>> cityGroupConcurrentMap = employeesList.parallelStream().collect(Collectors.groupingByConcurrent(EmployeeDTO::getCity));
+        cityGroupConcurrentMap.keySet().stream().forEach(System.out::println);
 
-				ConcurrentMap<String, Double> collectDblMap = employeesList.parallelStream().collect(groupingByConcurrent(EmployeeDTO::getCity,averagingInt(EmployeeDTO::getAge)));
-				collectDblMap.keySet().stream().forEach(System.out::println);
-				collectDblMap.values().stream().forEach(System.out::println);
 
-		System.out.println("Sum of age by city ");
+        System.out.println("Grouping by average age");
 
-		ConcurrentMap<String, Integer> cityAgeSumMap = employeesList.parallelStream().collect(groupingByConcurrent(EmployeeDTO::getCity,Collectors.summingInt(EmployeeDTO::getAge)));
-		
-		cityAgeSumMap.values().stream().forEach(System.out::println);
+        ConcurrentMap<String, Double> collectDblMap = employeesList.parallelStream().collect(groupingByConcurrent(EmployeeDTO::getCity, averagingInt(EmployeeDTO::getAge)));
+        collectDblMap.keySet().stream().forEach(System.out::println);
+        collectDblMap.values().stream().forEach(System.out::println);
 
-	}
+        System.out.println("Sum of age by city ");
+
+        ConcurrentMap<String, Integer> cityAgeSumMap = employeesList.parallelStream().collect(groupingByConcurrent(EmployeeDTO::getCity, Collectors.summingInt(EmployeeDTO::getAge)));
+
+        cityAgeSumMap.values().stream().forEach(System.out::println);
+
+    }
 
 }

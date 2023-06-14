@@ -1,36 +1,36 @@
 package home.amit.java.basic.collections.hierarchy;
 
 class HashMap {
-	//unordered
-	//unsynzhronized
-	//allows null key as value
-	//unsorted
-	// implements Map , cloneable , serialiable
-	//extends AbstractMap<K,V>
-	
-	//Treeify threshold if size of bins become too large or greater than treeify threshold - 8
-	// untreeify threshold when size gets reduced to 6 
-	// This guarantees O(logn)as search operation
+    //unordered
+    //unsynzhronized
+    //allows null key as value
+    //unsorted
+    // implements Map , cloneable , serialiable
+    //extends AbstractMap<K,V>
+
+    //Treeify threshold if size of bins become too large or greater than treeify threshold - 8
+    // untreeify threshold when size gets reduced to 6
+    // This guarantees O(logn)as search operation
 
 }
 
 
 class HashTable {
-	//unordered
-	//Synzhronized
-	//does not allow null key as value
-	//unsorted
-	// implements extends Dictionary<K,V>, implements Map , cloneable , serialiable
-	//extends AbstractMap<K,V>
-	
-	//Treeify threshold if size of bins become too large or greater than treeify threshold - 8
-	// untreeify threshold when size gets reduced to 6 
-	// This guarantees O(logn)as search operation
+    //unordered
+    //Synzhronized
+    //does not allow null key as value
+    //unsorted
+    // implements extends Dictionary<K,V>, implements Map , cloneable , serialiable
+    //extends AbstractMap<K,V>
+
+    //Treeify threshold if size of bins become too large or greater than treeify threshold - 8
+    // untreeify threshold when size gets reduced to 6
+    // This guarantees O(logn)as search operation
 
 }
 
-class IdentityHashMap{
-	
+class IdentityHashMap {
+
 //	This class implements the Map interface with a hash table, using reference-equality 
 //	in place of object-equality when comparing keys (and values). In other words, in an 
 //	IdentityHashMap, two keys k1 and k2 are considered equal if and only if (k1==k2). 
@@ -42,18 +42,17 @@ class IdentityHashMap{
 //	This class is designed for use only in the rare cases wherein reference-equality 
 //	semantics are required.
 //	
-	
+
 //	
 //	public class IdentityHashMap<K,V>
 //	extends AbstractMap<K,V>
 //	implements Map<K,V>, Serializable, Cloneable
-	
+
 }
 
 
+class WeakHaspMap {
 
-class WeakHaspMap{
-	
 //	public class WeakHashMap<K,V>
 //	extends AbstractMap<K,V>
 //	implements Map<K,V>
@@ -77,19 +76,16 @@ class WeakHaspMap{
 //	recreated, so it is impossible to do a lookup of that key in a WeakHashMap at some 
 //	later time and be surprised that its entry has been removed. 	
 //	
-	
+
 }
 
 
+class LinkedHashMap {
 
-
-
-class LinkedHashMap{
-	
 //	public class LinkedHashMap<K,V>
 //	extends HashMap<K,V>
 //	implements Map<K,V>
-	
+
 //	
 //	java.lang.Object
 //	 java.util.AbstractMap<K,V>
@@ -98,15 +94,15 @@ class LinkedHashMap{
 }
 
 class TreeMap {
-	//ordered by natural keys or by comparator interface implementation.
-	//unsynzhronized
-	//does not allow null key as value
-	//unsorted
-	// implements Map , cloneable , serialiable
-	//extends AbstractMap<K,V>
-	
-	//Treeify threshold if size of bins become too large or greater than treeify threshold - 8
-	// untreeify threshold when size gets reduced to 6 
-	// This guarantees O(logn)as search operation
+    //ordered by natural keys or by comparator interface implementation.
+    //unsynzhronized
+    //does not allow null key as value
+    //unsorted
+    // implements Map , cloneable , serialiable
+    //extends AbstractMap<K,V>
+
+    //Treeify threshold if size of bins become too large or greater than treeify threshold - 8
+    // untreeify threshold when size gets reduced to 6
+    // This guarantees O(logn)as search operation
 
 }

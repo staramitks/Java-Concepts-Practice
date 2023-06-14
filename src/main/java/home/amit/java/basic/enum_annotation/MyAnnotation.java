@@ -8,6 +8,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface MyAnnotation {
-    public String str();
-    public int val();
+    String str();
+
+    int val();
 }

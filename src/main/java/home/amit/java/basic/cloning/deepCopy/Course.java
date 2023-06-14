@@ -1,7 +1,7 @@
 package home.amit.java.basic.cloning.deepCopy;
 
 
-public class Course implements Cloneable{
+public class Course implements Cloneable {
 
     String subject1;
 
@@ -18,11 +18,9 @@ public class Course implements Cloneable{
 
     }
 
-    protected Object clone() throws CloneNotSupportedException
-    {
+    protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
-
 
 
 }

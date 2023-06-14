@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class QuickSort {
 
     // method to find the partition position
-    static int partition(int array[], int low, int high) {
+    static int partition(int[] array, int low, int high) {
 
         // choose the rightmost element as pivot
 
@@ -40,7 +40,7 @@ public class QuickSort {
         return (i + 1);
     }
 
-    static void quickSort(int array[], int low, int high) {
+    static void quickSort(int[] array, int low, int high) {
         if (low < high) {
 
             // find pivot element such that
@@ -49,11 +49,11 @@ public class QuickSort {
             int pi = partition(array, low, high);
 
             // recursive call on the left of pivot
-            System.out.println("Before" +Arrays.toString(array));
+            System.out.println("Before" + Arrays.toString(array));
             quickSort(array, low, pi - 1);
 
             // recursive call on the right of pivot
-            System.out.println("After" +Arrays.toString(array));
+            System.out.println("After" + Arrays.toString(array));
             quickSort(array, pi + 1, high);
         }
     }
@@ -61,9 +61,9 @@ public class QuickSort {
 
 // Main class
 class Main {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
-        int[] data = { 8, 7, 2, 1, 0, 9, 6 };
+        int[] data = {8, 7, 2, 1, 0, 9, 6};
         System.out.println("Unsorted Array");
         System.out.println(Arrays.toString(data));
 

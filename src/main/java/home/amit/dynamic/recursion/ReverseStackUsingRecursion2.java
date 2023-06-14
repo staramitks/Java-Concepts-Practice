@@ -5,34 +5,32 @@ import java.util.Stack;
 public class ReverseStackUsingRecursion2 {
     // 1
     // 2
-    public  void reverseStack(Stack<Integer> stack)
-    {
-        if (stack.size()==0)
-        {
+    public void reverseStack(Stack<Integer> stack) {
+        if (stack.size() == 0) {
             return;
         }
-        int temp=stack.pop();
+        int temp = stack.pop();
         reverseStack(stack);
         insertStack(stack, temp);
 
-   }
+    }
 
     private void insertStack(Stack<Integer> stack, int temp) {
-        if (stack.size()==0) {
+        if (stack.size() == 0) {
             stack.push(temp);
             return;
         }
-        int temp2=stack.pop();
-        insertStack(stack,temp);
+        int temp2 = stack.pop();
+        insertStack(stack, temp);
         stack.push(temp2);
 
     }
 
 
     public static void main(String[] args) {
-        ReverseStackUsingRecursion2 reverseStackUsingRecursion= new ReverseStackUsingRecursion2();
-        Stack<Integer> stack= new Stack<>();
-        Stack<Integer> reveredStack= new Stack<>();
+        ReverseStackUsingRecursion2 reverseStackUsingRecursion = new ReverseStackUsingRecursion2();
+        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> reveredStack = new Stack<>();
 
         stack.push(10);
         stack.push(20);
@@ -52,5 +50,5 @@ public class ReverseStackUsingRecursion2 {
         for (Integer integer : stack) {
             System.out.println(integer);
         }
-     }
+    }
 }

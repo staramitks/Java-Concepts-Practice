@@ -4,16 +4,17 @@ import java.util.Comparator;
 import java.util.Objects;
 import java.util.SortedSet;
 import java.util.TreeSet;
+
 /*
  * Duplicates not allowed
  * sorted as per natural sorting
- * 	 or by comparator provided at run time 
+ * 	 or by comparator provided at run time
  * 	  or via comparable interface
  * Cannot contain null value
  * Not Thread Safe
- * 
- * 
- * 
+ *
+ *
+ *
  */
 class Employee implements Comparable<Employee> {
     private int id;

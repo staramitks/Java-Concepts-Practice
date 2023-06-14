@@ -3,14 +3,12 @@ package home.amit.dynamic.recursion;
 public class SubSequenceString {
 
 
-    static void powerSet(String input, int index, String curr)
-    {
-       // System.out.println("Calling for index "+index);
+    static void powerSet(String input, int index, String curr) {
+        // System.out.println("Calling for index "+index);
         int n = input.length();
 
         // base case
-        if (index == n)
-        {
+        if (index == n) {
             System.out.println(curr);
             return;
         }
@@ -26,15 +24,13 @@ public class SubSequenceString {
         powerSet(input, index + 1, curr);
 
 
-
-
     }
 
     public static void main(String[] args) {
         String str = "abc";
         int index = 0;
-        String curr="";
-        powerSet(str,index,curr);
+        String curr = "";
+        powerSet(str, index, curr);
 
     }
 }

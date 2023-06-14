@@ -5,11 +5,10 @@ import java.util.Stack;
 public class PolishNotation {
 
 
-
     public static void main(String[] args) {
 
-        String[] tokens= new String[]{"2","1","+","3","*"};
-        PolishNotation polishNotation= new PolishNotation();
+        String[] tokens = new String[]{"2", "1", "+", "3", "*"};
+        PolishNotation polishNotation = new PolishNotation();
 
         System.out.println(polishNotation.eval(tokens));
 
@@ -17,36 +16,32 @@ public class PolishNotation {
 
     private String eval(String[] tokens) {
 
-        String operators="+-*/";
-        Stack<String> stack= new Stack<>();
-        for (String s: tokens)
-        {
-            if (!operators.contains(s))
-            {
+        String operators = "+-*/";
+        Stack<String> stack = new Stack<>();
+        for (String s : tokens) {
+            if (!operators.contains(s)) {
                 stack.push(s);
 
-            }
-            else
-            {
-                double a= Double.valueOf(stack.pop());
-                double b= Double.valueOf(stack.pop());
+            } else {
+                double a = Double.valueOf(stack.pop());
+                double b = Double.valueOf(stack.pop());
                 double d;
-                switch(s){
+                switch (s) {
 
                     case "+":
-                        d=a+b;
+                        d = a + b;
                         stack.push(String.valueOf(d));
                         break;
                     case "-":
-                        d=b-a;
+                        d = b - a;
                         stack.push(String.valueOf(d));
                         break;
                     case "*":
-                        d=a*b;
+                        d = a * b;
                         stack.push(String.valueOf(d));
                         break;
                     case "/":
-                        d=b/a;
+                        d = b / a;
                         stack.push(String.valueOf(d));
                         break;
 
@@ -59,7 +54,7 @@ public class PolishNotation {
         }
 
 
-    return stack.pop();
+        return stack.pop();
 
 
     }

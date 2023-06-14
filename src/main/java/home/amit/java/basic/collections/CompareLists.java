@@ -6,7 +6,7 @@ import java.util.List;
 public class CompareLists {
     public static void main(String[] args) {
 
-        List<Integer> listOne=new ArrayList<>();
+        List<Integer> listOne = new ArrayList<>();
         listOne.add(1);
         listOne.add(2);
         listOne.add(3);
@@ -14,7 +14,7 @@ public class CompareLists {
         listOne.add(5);
 
 
-        List<Integer> listTwo=new ArrayList<>();
+        List<Integer> listTwo = new ArrayList<>();
 
         listTwo.add(2);
         listTwo.add(4);
@@ -23,12 +23,9 @@ public class CompareLists {
         listTwo.add(3);
 
 
-        if(listOne.equals(listTwo))
-        {
+        if (listOne.equals(listTwo)) {
             System.out.println("Lists are Equal");
-        }
-        else
-        {
+        } else {
             System.out.println("Lists are not equal");
         }
     }

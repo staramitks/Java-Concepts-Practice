@@ -1,8 +1,6 @@
 package home.amit.java.basic.exceptionHandling.unchecked;
 
 
-import home.amit.java.defaultexamples.C;
-
 import java.util.ArrayList;
 
 
@@ -16,8 +14,7 @@ public class CustomUnCheckedException {
 
     // Note that in case of checked exception function who is throwing excpetion is forces to declare it using throws exception
     // and the called is again forced to handle it
-    public void testDay()
-    {
+    public void testDay() {
         ArrayList<String> arrayList = new ArrayList<>();
 
         arrayList.add("Monday");
@@ -25,8 +22,7 @@ public class CustomUnCheckedException {
         arrayList.add("Wednesday");
         String day = "Sunday";
 
-        if (!arrayList.contains(day))
-        {
+        if (!arrayList.contains(day)) {
             throw new DayNotExistsRTException("Day not available", day);
         }
         System.out.println("Next Processing");
@@ -36,7 +32,7 @@ public class CustomUnCheckedException {
 
     public static void main(String[] args) {
 
-        CustomUnCheckedException lDayNotExistsRTException= new CustomUnCheckedException();
+        CustomUnCheckedException lDayNotExistsRTException = new CustomUnCheckedException();
         lDayNotExistsRTException.testDay();
 
     }
@@ -73,6 +69,6 @@ class DayNotExistsRTException extends RuntimeException {
 
     @Override
     public String getLocalizedMessage() {
-        return "The day "+day + " is not available.";
+        return "The day " + day + " is not available.";
     }
 }

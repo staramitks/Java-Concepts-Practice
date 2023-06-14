@@ -6,16 +6,14 @@ package home.amit.java.basic.generics;
 
 public class GenericMethod {
     // A Generic method example
-    public  <T> void genericDisplay(T element)
-    {
+    public <T> void genericDisplay(T element) {
         System.out.println(element.getClass().getName() + " = " + element);
     }
 
     // Driver method
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // Calling generic method with Integer argument
-        GenericMethod genericMethod= new GenericMethod();
+        GenericMethod genericMethod = new GenericMethod();
         genericMethod.genericDisplay(11);
 
         // Calling generic method with String argument

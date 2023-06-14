@@ -24,31 +24,27 @@ import java.util.Arrays;
 public class ReArrangeArray {
 
 
-    public void reArrage(int array[])
-    {
-        int [] copiedArray= new int[array.length];
-        for (int i=0;i<array.length; i++)
-        {
-            copiedArray[i]=array[i];
+    public void reArrage(int[] array) {
+        int[] copiedArray = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            copiedArray[i] = array[i];
         }
         Arrays.sort(copiedArray);
-        int evenPos=array.length/2;
-        int oddPos=array.length-evenPos;
-        int size=array.length;
+        int evenPos = array.length / 2;
+        int oddPos = array.length - evenPos;
+        int size = array.length;
 
-        int j=oddPos-1;
-        for (int i=0; i<size ; i+=2)
-        {
+        int j = oddPos - 1;
+        for (int i = 0; i < size; i += 2) {
 
-            array[i]=copiedArray[j];
+            array[i] = copiedArray[j];
             j--;
         }
 
-        j=oddPos;
-        for (int k=1; k<size ; k+=2)
-        {
+        j = oddPos;
+        for (int k = 1; k < size; k += 2) {
 
-            array[k]=copiedArray[j];
+            array[k] = copiedArray[j];
             j++;
         }
 
@@ -57,11 +53,9 @@ public class ReArrangeArray {
     }
 
     public static void main(String[] args) {
-        int[] ar= new int[]{1, 2, 3, 4, 5, 6, 7};
-        ReArrangeArray reArrangeArray= new ReArrangeArray();
+        int[] ar = new int[]{1, 2, 3, 4, 5, 6, 7};
+        ReArrangeArray reArrangeArray = new ReArrangeArray();
         reArrangeArray.reArrage(ar);
-
-
 
 
     }

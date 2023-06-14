@@ -1,7 +1,6 @@
 package home.amit.java.basic.exceptionHandling;
 
 
-
 public class MyCheckedException extends Exception {
 
     private static final long serialVersionUID = -2872694086602732648L;
@@ -13,7 +12,7 @@ public class MyCheckedException extends Exception {
 
     }
 
-    MyCheckedException( String message, String cause) {
+    MyCheckedException(String message, String cause) {
         super(message, new Throwable(cause));
 
     }
@@ -25,7 +24,6 @@ public class MyCheckedException extends Exception {
     public String toString() {
         return String.format("MyCheckedException[%d]", this.id);
     }
-
 
 
 }

@@ -7,13 +7,13 @@ public class PredicateTest {
 
     public static void main(String[] args) {
 
-      Predicate<Integer> predicate=(n)->n>10;
-        System.out.println("Result is "+ predicate.test(0));
+        Predicate<Integer> predicate = (n) -> n > 10;
+        System.out.println("Result is " + predicate.test(0));
 
 
-        Function<Integer, Boolean> function=(n)->n/2==0;
+        Function<Integer, Boolean> function = (n) -> n / 2 == 0;
 
-        System.out.println("Function Result is "+ function.apply(3));
+        System.out.println("Function Result is " + function.apply(3));
 
 
     }

@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 public class StringExample {
 
-    public void checkStringUpdate(String str)
-    {
-        str= "My new string";
-        System.out.println("Inside function string is "+str);
+    public void checkStringUpdate(String str) {
+        str = "My new string";
+        System.out.println("Inside function string is " + str);
     }
+
     public static void main(String[] args) {
-        String str1 = new String("I Love Java");
-        String str2 = new String("I Love Java");
+        String str1 = "I Love Java";
+        String str2 = "I Love Java";
         String str3 = "I Love Java";
         String str4 = "I Love Java";
 
@@ -24,7 +24,7 @@ public class StringExample {
         stringExample.checkStringUpdate(str1);
         System.out.println(str1);
 
-        int[] myArray= {1,2,3};
+        int[] myArray = {1, 2, 3};
         System.out.println(Arrays.toString(myArray));
 
     }

@@ -7,21 +7,25 @@ public final class WrongImmutableStudent {
     private final int id;
     private final String name;
     private final Age age;
+
     public WrongImmutableStudent(int id, String name, Age age) {
-    this.name = name;
-    this.id = id;
-    this.age = age;
+        this.name = name;
+        this.id = id;
+        this.age = age;
     }
+
     public int getId() {
-    return id;
+        return id;
     }
+
     public String getName() {
-    return name;
+        return name;
     }
+
     public Age getAge() {
-    return age;
+        return age;
     }
-    
+
     public static void main(String[] args) {
         Age age = new Age();
         age.setDay(1);

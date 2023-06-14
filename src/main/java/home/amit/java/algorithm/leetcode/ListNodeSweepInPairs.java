@@ -1,7 +1,6 @@
 package home.amit.java.algorithm.leetcode;
 
 
-
 //Definition for singly-linked list.
 
 
@@ -51,14 +50,13 @@ class Solution {
 public class ListNodeSweepInPairs {
 
     public static void main(String[] args) {
-        ListNode head=new ListNode(10, new ListNode(20, new ListNode(30,new ListNode(40))));
-        ListNode node=head;
-        while (node!=null)
-        {
+        ListNode head = new ListNode(10, new ListNode(20, new ListNode(30, new ListNode(40))));
+        ListNode node = head;
+        while (node != null) {
             System.out.println(node.val);
-            node=node.next;
+            node = node.next;
         }
-        Solution solution= new Solution();
+        Solution solution = new Solution();
         solution.swapPairs(head);
     }
 

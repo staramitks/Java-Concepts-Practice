@@ -37,8 +37,7 @@ public class EmployeeDummy {
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         return 1;
     }
 
@@ -52,8 +51,7 @@ public class EmployeeDummy {
     }
 
     @Override
-    public boolean equals(Object o)
-    {
+    public boolean equals(Object o) {
         return true;
     }
 }

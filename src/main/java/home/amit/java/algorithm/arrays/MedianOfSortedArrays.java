@@ -16,22 +16,22 @@ b[]= {15,25,35,45,55}
 
 public class MedianOfSortedArrays {
 
-    public static double findMedianSortedArrays(int A[], int B[]) {
+    public static double findMedianSortedArrays(int[] A, int[] B) {
         int m = A.length;
         int n = B.length;
         if ((m + n) % 2 != 0) // odd
-            return (double) findKth(A, B, (m + n) / 2, 0, m - 1, 0, n - 1);
+            return findKth(A, B, (m + n) / 2, 0, m - 1, 0, n - 1);
         else { // even
             return (findKth(A, B, (m + n) / 2, 0, m - 1, 0, n - 1)
-                    + findKth(A, B, ((m + n) / 2 ) - 1, 0, m - 1, 0, n - 1)) * 0.5;
+                    + findKth(A, B, ((m + n) / 2) - 1, 0, m - 1, 0, n - 1)) * 0.5;
         }
     }
 
-    public static int findKth(int A[], int B[], int k, int aStart, int aEnd, int bStart, int bEnd) {
+    public static int findKth(int[] A, int[] B, int k, int aStart, int aEnd, int bStart, int bEnd) {
         int aLen = aEnd - aStart + 1;
         int bLen = bEnd - bStart + 1;
 
-      // Handle special cases
+        // Handle special cases
         if (aLen == 0)
             return B[bStart + k];
         if (bLen == 0)
@@ -57,9 +57,9 @@ public class MedianOfSortedArrays {
     }
 
     public static void main(String[] args) {
-        int a[] ={1,2,3,4,5,6,7,8,9,10,20, 30,40};
-        int b[]= {15,25,35,45,55};
-        System.out.println(findMedianSortedArrays(a,b));
+        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40};
+        int[] b = {15, 25, 35, 45, 55};
+        System.out.println(findMedianSortedArrays(a, b));
 
     }
 }

@@ -1,36 +1,28 @@
 package home.amit.java.multithreading;
 
-import home.amit.java.multithreading.QueueDataThreadCoordinator;
+public class DisplayThread implements Runnable {
 
-public class DisplayThread implements Runnable{
+    private final QueueDataThreadCoordinator queueDataHolder;
 
-	private QueueDataThreadCoordinator queueDataHolder;
-	
-	
-	public DisplayThread(QueueDataThreadCoordinator queueDataHolder) {
-		
-		this.queueDataHolder=queueDataHolder;
-	}
-	
-	@Override
-	public void run() {
-	
-		while (true)
-		{
-			boolean endFlag=false;
-			if ((queueDataHolder.getDataObjectDTO().getDataQueue().peek()!=null) && (queueDataHolder.getDataObjectDTO().getDataQueue().peek().equalsIgnoreCase("FOE")))
-			{
-				endFlag=true;
-			}
-			
-			queueDataHolder.displayElement();
-			
-			if (endFlag)
-			{
-				System.out.println("Exiting "+Thread.currentThread().getName());
-				break;
-			}
-		}
-	}
+
+    public DisplayThread(QueueDataThreadCoordinator queueDataHolder) {
+
+        this.queueDataHolder = queueDataHolder;
+    }
+
+    @Override
+    public void run() {
+
+        while (true) {
+            boolean endFlag = (queueDataHolder.getDataObjectDTO().getDataQueue().peek() != null) && (queueDataHolder.getDataObjectDTO().getDataQueue().peek().equalsIgnoreCase("FOE"));
+
+            queueDataHolder.displayElement();
+
+            if (endFlag) {
+                System.out.println("Exiting " + Thread.currentThread().getName());
+                break;
+            }
+        }
+    }
 
 }

@@ -16,11 +16,11 @@ public class LinkedListImpl {
         System.out.println(list.containsNode(head, 300));
         list.print(head);
         Node newNode = list.addToIndex(head, new Node(25), 2);
-        System.out.println("");
+        System.out.println();
         System.out.println("============  Result ===========");
         list.print(newNode);
         Node updatedNode = list.removeNode(head, new Node(25));
-        System.out.println("");
+        System.out.println();
         System.out.println("============  Result ===========");
         list.print(updatedNode);
     }
@@ -52,7 +52,7 @@ public class LinkedListImpl {
                 result = true;
             }
             head = head.next;
-     }
+        }
         return result;
 
     }

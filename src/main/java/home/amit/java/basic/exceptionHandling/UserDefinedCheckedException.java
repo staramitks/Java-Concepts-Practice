@@ -5,7 +5,7 @@ public class UserDefinedCheckedException extends Exception {
 
     private static final long serialVersionUID = -2872694086602732648L;
 
-    private int id;
+    private final int id;
 
     UserDefinedCheckedException(int i, String message) {
         super(message);

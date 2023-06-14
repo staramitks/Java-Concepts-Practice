@@ -17,31 +17,35 @@ public final class CorrectImmutableStudent {
     private final int id;
     private final String name;
     private final Age age;
+
     public CorrectImmutableStudent(int id, String name, Age age) {
-    this.name = name;
-    this.id = id;
-    Age clonedAge= new Age();
-    clonedAge.setDay(age.getDay());
-    clonedAge.setMonth(age.getMonth());
-    clonedAge.setYear(age.getYear());
-    this.age = clonedAge;
+        this.name = name;
+        this.id = id;
+        Age clonedAge = new Age();
+        clonedAge.setDay(age.getDay());
+        clonedAge.setMonth(age.getMonth());
+        clonedAge.setYear(age.getYear());
+        this.age = clonedAge;
     }
+
     public int getId() {
-    return id;
+        return id;
     }
+
     public String getName() {
-    return name;
+        return name;
     }
+
     public Age getAge() {
-    	Age clonedAge= new Age();
+        Age clonedAge = new Age();
         clonedAge.setDay(this.age.getDay());
         clonedAge.setMonth(this.age.getMonth());
         clonedAge.setYear(this.age.getYear());
 
-    	
-    	return clonedAge;
+
+        return clonedAge;
     }
-    
+
     public static void main(String[] args) {
         Age age = new Age();
         age.setDay(1);

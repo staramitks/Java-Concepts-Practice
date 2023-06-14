@@ -7,11 +7,11 @@ import java.util.concurrent.Semaphore;
 public class SemaphoreProducerConsumer {
     public static void main(String[] args) {
 
-        Semaphore consumerSemaphore= new Semaphore(0);
-        Semaphore producerSemaphore= new Semaphore(1);
+        Semaphore consumerSemaphore = new Semaphore(0);
+        Semaphore producerSemaphore = new Semaphore(1);
         List<Integer> intList = new ArrayList<Integer>();
-        Thread putThread = new Thread(new PutThread(producerSemaphore,consumerSemaphore, "Producer", intList));
-        Thread getThread= new Thread(new GetThread(producerSemaphore,consumerSemaphore,"Consumer",intList));
+        Thread putThread = new Thread(new PutThread(producerSemaphore, consumerSemaphore, "Producer", intList));
+        Thread getThread = new Thread(new GetThread(producerSemaphore, consumerSemaphore, "Consumer", intList));
         putThread.start();
         getThread.start();
         try {
@@ -23,11 +23,6 @@ public class SemaphoreProducerConsumer {
 
 
     }
-
-
-
-
-
 
 
 }
