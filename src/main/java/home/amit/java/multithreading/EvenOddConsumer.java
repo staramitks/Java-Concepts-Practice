@@ -36,8 +36,8 @@ public class EvenOddConsumer {
                 int evenCount = 0;
                 int loopCount = 0;
                 while (true) {
-                    System.out.println("Calling even thread for " + loopCount++ + "time");
-                    evenCount = dataHolder.getEvenNumber();
+                    System.out.println("Get Even Number " + dataHolder.getEvenNumber());
+
 
                     if (evenCount == 100) {
                         break;
@@ -54,10 +54,9 @@ public class EvenOddConsumer {
             public void run() {
                 int oddLoop = 0;
                 while (true) {
-                    System.out.println("Calling odd thread for " + oddLoop++ + "time");
                     int oddCOunt = dataHolder.getOddNumber();
-
-                    if (oddCOunt == 99) {
+                    System.out.println("Get Odd Number " + oddCOunt);
+                if (oddCOunt == 99) {
                         break;
                     }
                 }

@@ -123,6 +123,12 @@ public class DataProvider {
         int[] array = new int[]{2, 13, 1, 45, 23, 13, 41, 41, 11, 33, 11, 5, 6, 3, 56, 7, 43, 6, 76, 4, 54};
         return array;
 
+    }
+
+    public static int[] getSimpleArray() {
+
+        int[] array = new int[]{4, 13, 8, 45};
+        return array;
 
     }
 

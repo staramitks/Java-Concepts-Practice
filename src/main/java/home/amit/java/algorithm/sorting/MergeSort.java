@@ -1,5 +1,18 @@
 package home.amit.java.algorithm.sorting;
 
+
+/*
+
+About Divide and merge
+Divide till only 1 element is left and then merge
+1- Find mid point - terminal condition mid point is less than 2
+2- create left and right array
+3- merge sort (left , mid)
+4- merge sort (r, n-mid)
+5- join array (l,r,a)
+
+
+ */
 public class MergeSort {
 
     public void mergeSort(int[] a, int n) {

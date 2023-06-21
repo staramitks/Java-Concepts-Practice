@@ -2,6 +2,14 @@ package home.amit.java.algorithm.sorting;
 
 import home.amit.java.basic.dataprovider.DataProvider;
 
+/*
+
+In most cases the insertion sort is the best of the elementary sorts described in this
+chapter. It still executes in O(N2
+) time, but it’s about twice as fast as the bubble sort
+and somewhat faster than the selection sort in normal situations
+
+ */
 public class InsertSort {
 
     static void printArray(int[] arr) {
@@ -17,8 +25,8 @@ public class InsertSort {
     public void sortArray(int[] arr) {
         int n = arr.length;
         for (int i = 1; i < n; i++) {
-            int key = arr[i];  //30
-            int j = i - 1; //1
+            int key = arr[i];
+            int j = i - 1;
 
             /* Move elements of arr[0..i-1], that are
                greater than key, to one position ahead
@@ -34,7 +42,7 @@ public class InsertSort {
     }
 
     public static void main(String[] args) {
-        int[] array = DataProvider.getArray();
+        int[] array = DataProvider.getSimpleArray();
         InsertSort insertSort = new InsertSort();
         insertSort.sortArray(array);
         printArray(array);

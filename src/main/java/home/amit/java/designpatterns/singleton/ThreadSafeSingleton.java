@@ -17,7 +17,9 @@ Examples
 
 	java.lang.Runtime#getRuntime()
 	java.awt.Desktop#getDesktop()
-
+   Double checked locking principle is used.
+   In this approach, the synchronized block is used inside the
+   if condition with an additional check to ensure that only one instance of singleton class is created.
 
  */
 public class ThreadSafeSingleton {
@@ -27,9 +29,13 @@ public class ThreadSafeSingleton {
     private ThreadSafeSingleton() {
     }
 
-    public static synchronized ThreadSafeSingleton getInstance() {
+    public static ThreadSafeSingleton getInstance() {
         if (instance == null) {
-            instance = new ThreadSafeSingleton();
+            synchronized (ThreadSafeSingleton.class) {
+                if (instance == null) {
+                    instance = new ThreadSafeSingleton();
+                }
+            }
         }
         return instance;
     }

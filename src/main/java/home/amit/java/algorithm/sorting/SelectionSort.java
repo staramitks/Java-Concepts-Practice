@@ -5,6 +5,19 @@ import home.amit.java.basic.dataprovider.DataProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+
+
+The selection sort improves on the bubble sort by reducing the number of swaps
+necessary from O(N2
+) to O(N). Unfortunately, the number of comparisons remains
+O(N2
+). However, the selection sort can still offer a significant improvement for large
+records that must be physically moved around in memory, causing the swap time to
+be much more important than the comparison time
+
+ */
+
 public class SelectionSort {
 
 

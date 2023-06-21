@@ -4,14 +4,10 @@ import java.util.Stack;
 
 public class PolishNotation {
 
-
     public static void main(String[] args) {
-
         String[] tokens = new String[]{"2", "1", "+", "3", "*"};
         PolishNotation polishNotation = new PolishNotation();
-
         System.out.println(polishNotation.eval(tokens));
-
     }
 
     private String eval(String[] tokens) {
@@ -44,18 +40,9 @@ public class PolishNotation {
                         d = b / a;
                         stack.push(String.valueOf(d));
                         break;
-
                 }
-
-
             }
-
-
         }
-
-
         return stack.pop();
-
-
     }
 }
