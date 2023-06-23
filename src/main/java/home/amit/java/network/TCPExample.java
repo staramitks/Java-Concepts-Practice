@@ -18,7 +18,7 @@ public class TCPExample {
             outputStream.write(buf);
 
             while ((c = inputStream.read()) != -1) {
-                System.out.println((char) c);
+                System.out.print((char) c);
             }
 
         }

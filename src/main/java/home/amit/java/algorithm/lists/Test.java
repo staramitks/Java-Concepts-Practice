@@ -14,6 +14,7 @@ public class Test {
 
         System.out.println(list1.equals(list2));
         System.out.println(list1.equals(list3));
+        System.out.println(list2.equals(list3));
 
 
     }

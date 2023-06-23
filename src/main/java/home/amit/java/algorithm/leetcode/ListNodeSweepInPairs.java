@@ -58,6 +58,12 @@ public class ListNodeSweepInPairs {
         }
         Solution solution = new Solution();
         solution.swapPairs(head);
+
+        ListNode node2 = head;
+        while (node2 != null) {
+            System.out.println(node2.val);
+            node2 = node2.next;
+        }
     }
 
 }

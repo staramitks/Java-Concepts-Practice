@@ -3,9 +3,9 @@ package home.amit.java.algorithm.sorting;
 
 /*
 
-About Divide and merge
+About Divide and merge - Divide from middle
 Divide till only 1 element is left and then merge
-1- Find mid point - terminal condition mid point is less than 2
+1- Find mid point - terminal condition mid point is less than 2 mergesort (int[] a , int n)
 2- create left and right array
 3- merge sort (left , mid)
 4- merge sort (r, n-mid)
@@ -14,6 +14,18 @@ Divide till only 1 element is left and then merge
 
  */
 public class MergeSort {
+
+    public static void main(String[] args) {
+
+        MergeSort mergeSort = new MergeSort();
+        int[] actual = {5, 1, 6, 2, 3, 4};
+        mergeSort.mergeSort(actual, actual.length);
+
+        for (int i = 0; i < actual.length; i++) {
+            System.out.println(actual[i]);
+        }
+
+    }
 
     public void mergeSort(int[] a, int n) {
         if (n < 2) {
@@ -53,32 +65,17 @@ public class MergeSort {
         }
 
         if (i > j) {
-            for (int left = j; left < rightArray.length; left++) {
-                resultArray[k] = rightArray[left];
-                k++;
+            for (int right = j; right < rightArray.length; right++) {
+                resultArray[k++] = rightArray[right];
             }
         } else {
             if (i < j) {
                 for (int left = i; left < leftArray.length; left++) {
-                    resultArray[k] = leftArray[left];
-                    k++;
+                    resultArray[k++] = leftArray[left];
                 }
             }
         }
         return resultArray;
-
-    }
-
-
-    public static void main(String[] args) {
-
-        MergeSort mergeSort = new MergeSort();
-        int[] actual = {5, 1, 6, 2, 3, 4};
-        mergeSort.mergeSort(actual, actual.length);
-
-        for (int i = 0; i < actual.length; i++) {
-            System.out.println(actual[i]);
-        }
 
     }
 }
