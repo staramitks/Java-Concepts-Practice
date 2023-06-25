@@ -1,4 +1,4 @@
-package home.amit.java.lambdas;
+package home.amit.java8.enhancements.lambdas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,15 @@ public class StreamFilterExample {
                     return s.toUpperCase();
                 }
         ).collect(Collectors.toList());
+
+
+        //List<String> secondList=myList.stream().filter(s -> true).map(s ->s.toUpperCase()).collect(Collectors.toList());
+        List<String> secondList=myList.stream().map(s ->s.toUpperCase()).collect(Collectors.toList());
+        System.out.println(secondList);
+    }
+
     }
 
 
-}
+
+

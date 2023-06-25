@@ -31,11 +31,11 @@ public class PriorityQueueExample {
         Collections.sort(employees);
         employees.stream().forEach(e -> System.out.println(e.getAge()));
         employees.stream().forEach(e -> empPriorityQueue.add(e));
-        System.out.println("Length is " + empPriorityQueue.size());
+        System.out.println("Length of priorityqueue elements is " + empPriorityQueue.size());
         empPriorityQueue.forEach(e -> System.out.println(e.getAge()));
-        System.out.println("Top element is " + empPriorityQueue.peek().getAge());
+        System.out.println("Top element in PriorityQueue is " + empPriorityQueue.peek().getAge());
         empPriorityQueue.poll();
-        System.out.println("Second element is " + empPriorityQueue.peek().getAge());
+        System.out.println("Second element in PriorityQueue is " + empPriorityQueue.peek().getAge());
 
 
     }

@@ -1,4 +1,4 @@
-package home.amit.java.lambdas;
+package home.amit.java8.enhancements.lambdas;
 
 interface MyFunc {
 
@@ -14,7 +14,7 @@ public class LambdaExpressionVariableCapture {
 
         int clsVar = 10;
 
-        home.amit.java.lambdas.MyFunc myFunc = (n) -> {
+        home.amit.java8.enhancements.lambdas.MyFunc myFunc = (n) -> {
 
             int result = n + clsVar;
 

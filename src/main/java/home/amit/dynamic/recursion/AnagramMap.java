@@ -8,7 +8,9 @@ Month :- 06
 Month Name Short :- Jun
 */
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 ////////////////////////////////////////////////////////////////
 class AnagramApp
 {

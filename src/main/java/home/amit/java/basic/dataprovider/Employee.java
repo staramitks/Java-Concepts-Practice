@@ -6,6 +6,14 @@ public class Employee extends Person implements Comparable<Employee> {
     private long salary;
 
     @Override
+    public String toString() {
+        return "Employee{" +
+                "company='" + company + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         final int prime = 31;
         int result = super.hashCode();

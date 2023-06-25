@@ -1,4 +1,4 @@
-package home.amit.java.lambdas;
+package home.amit.java8.enhancements.lambdas;
 
 import java.util.Arrays;
 import java.util.List;
@@ -45,7 +45,7 @@ public class MaxMinReduceDistinctCountSumExample {
 
 
     public static void main(String... args) {
-        home.amit.java.lambdas.MaxMinReduceDistinctCountSumExample lMaxMinReduceDistinctCountSumExample = new home.amit.java.lambdas.MaxMinReduceDistinctCountSumExample();
+        home.amit.java8.enhancements.lambdas.MaxMinReduceDistinctCountSumExample lMaxMinReduceDistinctCountSumExample = new home.amit.java8.enhancements.lambdas.MaxMinReduceDistinctCountSumExample();
         lMaxMinReduceDistinctCountSumExample.getCount();
         lMaxMinReduceDistinctCountSumExample.getMax();
         lMaxMinReduceDistinctCountSumExample.getMin();

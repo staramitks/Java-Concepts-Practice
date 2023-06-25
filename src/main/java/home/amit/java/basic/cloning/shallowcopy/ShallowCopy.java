@@ -14,6 +14,18 @@ class Student implements Cloneable {
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", course.subject3=" + course.subject3 +
+                ", course.subject2=" + course.subject2 +
+                ", course.subject3=" + course.subject1 +
+
+                '}';
+    }
+
 }
 
 
@@ -29,15 +41,11 @@ public class ShallowCopy {
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-
-        System.out.println("Original Objects Subject is ==> " + student1.course.subject3);         //Output : Biology
-
-        //Changing the subject3 of 'student2'
+        System.out.println("Original Objects is ==> " + student1);
+        System.out.println("Shallow Cloned Objects  is ==> " + student2);
 
         student2.course.subject3 = "Maths";
-
-        //This change will be reflected in original student 'student1'
-
-        System.out.println("After updating original, clones object's subject is ===> " + student1.course.subject3);       //Output : Maths
+        System.out.println("After Updating - Cloned is  ==> " + student2);         //Output : Biology
+        System.out.println("After updating Cloned Object, Original Source Object is ===> " + student1);     //Output : Maths
     }
 }

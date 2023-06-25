@@ -1,4 +1,4 @@
-package home.amit.java.lambdas;
+package home.amit.java8.enhancements.lambdas;
 
 public class Flower {
 

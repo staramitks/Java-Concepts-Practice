@@ -1,4 +1,4 @@
-package home.amit.java.completableFuture;
+package home.amit.java8.enhancements.completableFuture;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,7 +26,7 @@ public class CompletableFutureExample {
         Map<String, String> result = new HashMap<String, String>();
 
 
-        List<Map<String, String>> subResults = new ArrayList<Map<String, String>>();
+        var subResults = new ArrayList<Map<String, String>>();
         CompletableFuture<Map<String, String>> perfMap1 = CompletableFuture.supplyAsync(() -> getPerformanceMap());
 
         CompletableFuture<Map<String, String>> productMap1 = CompletableFuture.supplyAsync(() -> getProductsMap());

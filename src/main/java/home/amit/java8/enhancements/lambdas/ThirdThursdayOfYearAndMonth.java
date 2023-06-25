@@ -1,4 +1,4 @@
-package home.amit.java.lambdas;
+package home.amit.java8.enhancements.lambdas;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -6,9 +6,14 @@ import java.time.temporal.TemporalAdjusters;
 
 public class ThirdThursdayOfYearAndMonth {
 
+    private LocalDate ldate;
+    public ThirdThursdayOfYearAndMonth(LocalDate localDate)
+    {
+        this.ldate=localDate;
+    }
 
-    private int getDate(int year, int month) {
-        LocalDate ldate = LocalDate.of(year, month, 1)
+    private int getThirdThursdayOfYearAndMonth() {
+        LocalDate ldate = this.ldate
                 .with(TemporalAdjusters.nextOrSame(DayOfWeek.THURSDAY))
                 .with(TemporalAdjusters.next(DayOfWeek.THURSDAY))
                 .with(TemporalAdjusters.next(DayOfWeek.THURSDAY));
@@ -17,8 +22,8 @@ public class ThirdThursdayOfYearAndMonth {
     }
 
     public static void main(String[] args) {
-        home.amit.java.lambdas.ThirdThursdayOfYearAndMonth thirdThursdayOfYearAndMonth = new home.amit.java.lambdas.ThirdThursdayOfYearAndMonth();
-        System.out.println(thirdThursdayOfYearAndMonth.getDate(2019, 11));
+        ThirdThursdayOfYearAndMonth thirdThursdayOfYearAndMonth = new ThirdThursdayOfYearAndMonth(LocalDate.now());
+        System.out.println(" "+thirdThursdayOfYearAndMonth.getThirdThursdayOfYearAndMonth());
 
     }
 

@@ -1,4 +1,4 @@
-package home.amit.java.lambdas;
+package home.amit.java8.enhancements.lambdas;
 
 import java.util.function.Function;
 import java.util.function.Predicate;

@@ -1,12 +1,13 @@
-package home.amit.java.lambdas;
+package home.amit.java8.enhancements.lambdas;
 
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
+import static java.util.stream.Collectors.groupingBy;
+        ;
 
-import static java.util.stream.Collectors.averagingInt;
-import static java.util.stream.Collectors.groupingByConcurrent;
+import static java.util.stream.Collectors.*;
 
 public class GroupByExample {
 
@@ -17,14 +18,13 @@ public class GroupByExample {
 
         Map<String, List<EmployeeDTO>> cityGroupMap;
 
-        cityGroupMap = employeesList.stream().collect(Collectors.groupingBy(EmployeeDTO::getCity));
+        cityGroupMap = employeesList.stream().collect(groupingBy(EmployeeDTO::getCity));
         cityGroupMap.keySet().stream().forEach(System.out::println);
 
 
         System.out.println("Parallel Stream");
         Map<String, List<EmployeeDTO>> cityGroupConcurrentMap = employeesList.parallelStream().collect(Collectors.groupingByConcurrent(EmployeeDTO::getCity));
         cityGroupConcurrentMap.keySet().stream().forEach(System.out::println);
-
 
         System.out.println("Grouping by average age");
 

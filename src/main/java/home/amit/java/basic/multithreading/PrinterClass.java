@@ -15,7 +15,7 @@ class Printer {
         // If balance number of Papers are less than user input
         // then wait for addPages() synchronized method
         // and printing will resume after that
-        if (this.noOfPaper < pages) {
+        while (this.noOfPaper < pages) {
 
             System.out.println("Number of Papers in printer are less");
             try {

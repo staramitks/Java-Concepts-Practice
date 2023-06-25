@@ -33,7 +33,9 @@ class Student implements Cloneable {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", course=" + course +
+                ", course.subject3=" + course.subject3 +
+                ", course.subject2=" + course.subject2 +
+                ", course.subject3=" + course.subject1 +
                 ", dob=" + dob +
                 '}';
     }
@@ -55,18 +57,16 @@ public class DeepCopy {
             e.printStackTrace();
         }
 
-        System.out.println("Original Objects Subject is ==> " + student1.course.subject3);         //Output : Biology
-        System.out.println("Original Date Of Birth is  ==> " + student1.dob.toString());         //Output : Biology
-
-        //Changing the subject3 of 'student2'
+        System.out.println("Original Objects is ==> " + student1);
+        System.out.println("Deep Cloned Objects  is ==> " + student2);
 
         student2.course.subject3 = "Maths";
         student2.dob = LocalDate.of(1999, 8, 20);
-        System.out.println("Cloned is  ==> " + student2.dob);         //Output : Biology
+        System.out.println("After Updating - Cloned is  ==> " + student2);         //Output : Biology
         //This change will be reflected in original student 'student1'
 
-        System.out.println("After updating original, clones object's subject is ===> " + student1.course.subject3);
-        System.out.println("After updating  Of Birth is  ==> " + student1.dob.toString());         //Output : Biology//Output : Maths
+        System.out.println("After updating Cloned Object, Original Source Object is ===> " + student1);
+
     }
 
 

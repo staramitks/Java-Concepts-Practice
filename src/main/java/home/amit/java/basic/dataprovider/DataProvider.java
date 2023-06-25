@@ -1,5 +1,7 @@
 package home.amit.java.basic.dataprovider;
 
+import home.amit.java8.enhancements.lambdas.EmployeeDTO;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -103,18 +105,36 @@ public class DataProvider {
         list.add(16);
         list.add(133);
         list.add(132);
-//		list.add(15435);
-//		list.add(15767);
-//		list.add(14532);
-//		list.add(31);
-//		list.add(54541);
-//		list.add(154543);
-//		list.add(156547);
-//		list.add(3451);
-//		list.add(999999999);
-//		list.add(5781);
+
 
         return list;
+    }
+
+
+    public List<EmployeeDTO> getEmployeesDTOList() {
+        List<EmployeeDTO> empList = new ArrayList<>();
+        EmployeeDTO emp1 = new EmployeeDTO("1234", "Amit", "Agra", 30);
+        EmployeeDTO emp2 = new EmployeeDTO("2323", "sUMIT", "madra", 40);
+        EmployeeDTO emp3 = new EmployeeDTO("12342", "aKAHASH", "Chennai", 50);
+        EmployeeDTO emp4 = new EmployeeDTO("14334", "sHELLY", "Agartala", 60);
+        EmployeeDTO emp5 = new EmployeeDTO("1234", "Shalu", "Agra", 90);
+        EmployeeDTO emp6 = new EmployeeDTO("32213", "tinku", "Bangloare", 20);
+        EmployeeDTO emp7 = new EmployeeDTO("870", "Vinit", "Bangalore", 25);
+        EmployeeDTO emp8 = new EmployeeDTO("2389721", "Tam", "Punjab", 31);
+        EmployeeDTO emp9 = new EmployeeDTO("2389721", "Amiadsat", "Agra", 32);
+        EmployeeDTO emp10 = new EmployeeDTO("89709", "sddsd", "Agra", 33);
+        empList.add(emp1);
+        empList.add(emp2);
+        empList.add(emp3);
+        empList.add(emp4);
+        empList.add(emp5);
+        empList.add(emp6);
+        empList.add(emp7);
+        empList.add(emp8);
+        empList.add(emp9);
+        empList.add(emp10);
+
+        return empList;
     }
 
 

@@ -23,11 +23,11 @@ class TreeSet {
 
 class LinkedHashSet {
 
-    // extends HashSet<E> , implements Set, Cloneable, Serializable
-//unsynchronized
-//maintains insertion order by using doubly linked list
-//unsorted
-//useshashCode
+// extends HashSet<E> , implements Set, Cloneable, Serializable
+//- unsynchronized
+//- maintains insertion order by using doubly linked list
+//- unsorted
+// uses-hashCode
 
 
 }

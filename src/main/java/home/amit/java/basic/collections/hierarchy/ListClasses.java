@@ -26,10 +26,10 @@ class LinkedList { //implements List<E>, DeQueue, Cloneable, Serializable
 
 //Elements are doubly linked forward and backward
     //iteration slower than arrayList
-    // insertion and deltion faster
-    //supports queue operation like peek , poll etc
-    //unsynchronized
-    //public class LinkedList<E>
+    // insertion and deletion faster
+    // supports queue operation like peek , poll etc
+    // unsynchronized
+    // public class LinkedList<E>
     //  extends AbstractSequentialList<E>
     //  implements List<E>, Deque<E>, Cloneable, java.io.Serializable
 

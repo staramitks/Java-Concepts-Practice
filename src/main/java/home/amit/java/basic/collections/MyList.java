@@ -20,7 +20,7 @@ public class MyList<E> extends ArrayList<E> {
     }
 
     public static void main(String[] args) {
-        List<Integer> mylist = new MyList<>();
+        var mylist = new MyList<>();
         mylist.add(10);
         mylist.add(20);
         mylist.add(30);

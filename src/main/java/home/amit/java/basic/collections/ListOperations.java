@@ -5,6 +5,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ListOperations {
+    public static void main(String[] args) {
+        ListOperations listOperations = new ListOperations();
+        listOperations.checkAddNum();
+        listOperations.printDuplicates();
+        listOperations.getSum();
+        listOperations.getMax();
+        listOperations.getMin();
+
+    }
+
     private void checkAddNum() {
         var intList = new ArrayList<Integer>();
         intList.add(10);
@@ -50,18 +60,5 @@ public class ListOperations {
         intList.add(30);
         intList.add(40);
         return intList;
-    }
-
-
-    public static void main(String[] args) {
-        ListOperations listOperations = new ListOperations();
-        listOperations.checkAddNum();
-        listOperations.printDuplicates();
-        listOperations.getSum();
-        listOperations.getMax();
-        listOperations.getMin();
-
-//        Object obj=null;
-//        Objects.requireNonNull(obj,"Object can't be null");
     }
 }

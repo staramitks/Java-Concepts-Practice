@@ -1,4 +1,4 @@
-package home.amit.java.defaultexamples;
+package home.amit.java8.enhancements.defaultexamples;
 
 public interface A {
 

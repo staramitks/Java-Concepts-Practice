@@ -36,16 +36,13 @@ public class ExecutorServiceExample {
 
         //String result = executorService.invokeAny(callables);
         List<Future<String>> result = executorService.invokeAll(callables);
-        try{
-        for (Future s:result)
-        {
-            System.out.println(s.get());
-        }
+        try {
+            for (Future s : result) {
+                System.out.println(s.get());
+            }
 
-        executorService.shutdown();
-        }
-        catch (Exception e)
-        {
+            executorService.shutdown();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

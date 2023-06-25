@@ -9,21 +9,29 @@ public class SimilarSoundingWords {
         char[] inputArray = input.toCharArray();
         StringBuilder pattern = new StringBuilder();
         int[] num = new int[inputArray.length];
-        for (int k = 0; k < inputArray.length; k++) {
-            num[k] = -1;
+        //MOON --> -1 -1 -1 -1
+        for (int i=0;i<inputArray.length;i++)
+        {
+            num[i]=-1;
         }
-        for (int i = 0; i < inputArray.length; i++) {
-            if (num[i] == -1) {
-                num[i] = i;
-            } else {
-                continue;
-            }
-            for (int j = i + 1; j < inputArray.length; j++) {
-                if (inputArray[i] == inputArray[j]) {
-                    num[j] = i;
+        int putSize=0;
+       // num[0]=0;
+
+        //MOON --> 0 -1 -1 -1
+        for (int i=0;i<inputArray.length;i++)
+        {
+            for (int j=i+1;j<inputArray.length;j++)
+            {
+                if (inputArray[i] == inputArray[j] && num[j]==-1 && num[i]==-1 )
+                {
+                    num[i]=i;
+                    num[j]=i;
+
                 }
             }
         }
+
+        System.out.println("For "+input +" pattern is "+Arrays.toString(num));
 
         StringBuilder patternType = new StringBuilder();
         for (int m = 0; m < num.length; m++) {
@@ -49,7 +57,7 @@ public class SimilarSoundingWords {
 
     public static void main(String[] args) {
         SimilarSoundingWords lSimilarSoundingWords = new SimilarSoundingWords();
-        List<String> myList = Arrays.asList("NOON", "COOK", "LOOK", "SEND", "TEST", "LOLO");
+        List<String> myList = Arrays.asList("NOON", "COOK", "LOOK", "SEND", "TEST", "LOLO","OLLM");
         lSimilarSoundingWords.printSimilarPatternWords("MOON", myList);
     }
 }
