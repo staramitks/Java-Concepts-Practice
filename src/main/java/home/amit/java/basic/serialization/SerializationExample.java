@@ -9,7 +9,7 @@ The String class and all the wrapper classes implements java.io.Serializable int
 Parent Child relationship
 1-	It is not mandatory that super class must be serializable, for e.g. all classes extend object class but object class is not serializable while if child class implements serializability that it is serializable.
 2-	If Parent class has no args constructor and is referred in child class then also it is fine.
-3- If a class implements serializable then all its sub classes will also be serializable. Let's see the example given below:
+3- If a class implements serializable then all its sub classes will also be serializable.
 4- If a class has a reference of another class, all the references must be Serializable otherwise serialization process will not be performed
 5- If there is any static data member in a class, it will not be serialized because static is the part of class not object.
 6- Java transient keyword is used in serialization. If you define any data member as transient, it will not be serialized.

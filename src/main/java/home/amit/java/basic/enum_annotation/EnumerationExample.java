@@ -8,19 +8,19 @@ enum Weekday {
         switch (this)
         {
             case MONDAY:
-                return "Sadly today is Monday";
+                return "Sadly today is MONDAY";
             case TUESDAY:
-                return "Sadly today is TUESDAY";
+                return "Better today is TUESDAY";
             case WEDNESDAY:
-                return "Sadly today is WEDNESDAY";
+                return "Good today is WEDNESDAY";
             case THURSDAY:
-                return "Sadly today is Monday";
+                return "yaaa today is THURSDAY";
             case FRIDAY:
-                return "Sadly today is FRIDAY";
+                return "Finally its FRIDAY";
             case SATURDAY:
-                return "Sadly today is SATURDAY";
+                return "Enjoy as today is SATURDAY";
             case SUNDAY:
-                return "Sadly today is SUNDAY";
+                return "Relaxing day as today it is SUNDAY";
             default:
                 return "couldnt find day";
 

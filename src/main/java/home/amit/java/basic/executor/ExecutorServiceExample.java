@@ -17,7 +17,7 @@ public class ExecutorServiceExample {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Set<Callable<String>> callables = new HashSet<Callable<String>>();
+        Set<Callable<String>> callables = new HashSet<>();
         callables.add(new Callable<String>() {
             public String call() throws Exception {
                 return "Task 1";

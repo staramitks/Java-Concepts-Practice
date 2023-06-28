@@ -7,7 +7,8 @@ package home.amit.java.basic.immutable;
  * 
  *  //Default version of clone() method. It creates shallow copy of an object.
  
-while setting and getting objects from immutable list always use defensive copy mechanism to create a new object first then assign values of objects to the newly created object
+while setting and getting objects from immutable list always use defensive copy mechanism to create a new object first
+* then assign values of objects to the newly created object
  * 
  * 
  */

@@ -35,18 +35,21 @@ public class ListOperations {
     private void getSum() {
         ArrayList<Integer> intList = getIntegersList();
         int sumResult = intList.stream().reduce((i, j) -> i + j).get();
+        int otherWay=intList.stream().reduce(Integer::sum).get();
         System.out.println("Result is " + sumResult);
     }
 
     private void getMin() {
         ArrayList<Integer> intList = getIntegersList();
         int min = intList.stream().reduce((i, j) -> i < j ? i : j).get();
+        int otherWay=intList.stream().reduce(Integer::min).get();
         System.out.println("Result is " + min);
     }
 
     private void getMax() {
         ArrayList<Integer> intList = getIntegersList();
         int max = intList.stream().reduce((i, j) -> i > j ? i : j).get();
+        int otherWay=intList.stream().reduce(Integer::max).get();
         System.out.println("Result is " + max);
     }
 

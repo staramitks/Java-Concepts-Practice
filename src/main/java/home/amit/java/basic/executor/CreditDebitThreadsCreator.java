@@ -27,13 +27,13 @@ public class CreditDebitThreadsCreator {
         Thread balanceThread = new Thread(() -> System.out.println("Final Balance is " + accountTransaction.getBalance()), "BalanceThread");
 		withdrawThread.start();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(10000);
             depositThread.start();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-		//Problematic as it can get triggerred in first go as well.. This must be trigerred when Deposit and Withdrawal have been executed
+		//Problematic as it can get triggered in first go as well.. This must be triggered when Deposit and Withdrawal have been executed
         try {
             withdrawThread.join();
             depositThread.join();
@@ -46,7 +46,8 @@ public class CreditDebitThreadsCreator {
 
         /* This will work fine as balance thread is trigerred after two are executed and completed*/
 
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        int numOfProcessors=Runtime.getRuntime().availableProcessors();
+        ExecutorService executorService = Executors.newFixedThreadPool(numOfProcessors);
         executorService.submit(withdrawThread);
         executorService.submit(depositThread);
         executorService.shutdown();

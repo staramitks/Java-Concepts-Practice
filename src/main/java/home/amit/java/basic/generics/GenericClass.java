@@ -22,7 +22,7 @@ class Test<T, U> {
 // Driver class to test above
 public class GenericClass {
     public static void main(String[] args) {
-        Test<String, Integer> obj = new Test<String, Integer>("GfG", 15);
+        Test<String, Integer> obj = new Test<>("GfG", 15);
 
         obj.print();
     }

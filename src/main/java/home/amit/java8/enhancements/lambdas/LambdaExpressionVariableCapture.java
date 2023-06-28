@@ -14,7 +14,7 @@ public class LambdaExpressionVariableCapture {
 
         int clsVar = 10;
 
-        home.amit.java8.enhancements.lambdas.MyFunc myFunc = (n) -> {
+        MyFunc myFunc = (n) -> {
 
             int result = n + clsVar;
 
