@@ -9,14 +9,14 @@ public class JPMCTest {
         List<String> list = Arrays.asList(testString.split(":"));
         int matchCount = 0;
 
-        for (int end = 0; end < list.size() - 1; end++) {
-            for (int j = end + 1; j < list.size(); j++) {
-                if (list.get(end).split("-")[1].equalsIgnoreCase(list.get(j).split("-")[0])) {
+        for (int start = 0; start < list.size() - 1; start++) {
+            for (int j = start + 1; j < list.size(); j++) {
+                if (list.get(start).split("-")[1].equalsIgnoreCase(list.get(j).split("-")[0])) {
                     matchCount++;
-                    if (end + 1 != j) {
+                    if (start + 1 != j) {
                         String jval = list.get(j); //10-40
-                        String ival = list.get(end + 1); //120-30
-                        list.set(end + 1, jval); //START-10:10-40
+                        String ival = list.get(start + 1); //120-30
+                        list.set(start + 1, jval); //START-10:10-40
                         list.set(j, ival);   //START-10:10-40...120-30
                     }
                 }

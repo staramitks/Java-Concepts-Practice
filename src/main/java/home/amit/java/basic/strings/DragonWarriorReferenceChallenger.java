@@ -15,7 +15,7 @@ public class DragonWarriorReferenceChallenger {
         String warriorWeapon = "Sword ";
         changeWarriorClass(warriorProfession, warriorWeapon);
 
-        System.out.println("Warrior=" + warriorProfession + " Weapon=" + warriorWeapon);
+        System.out.println("warriorProfession=" + warriorProfession + " Weapon=" + warriorWeapon);
     }
 
     static void changeWarriorClass(StringBuilder warriorProfession, String weapon) {

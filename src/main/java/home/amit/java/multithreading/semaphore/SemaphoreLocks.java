@@ -6,8 +6,16 @@ public class SemaphoreLocks {
 
     public static void main(String[] args) {
         Semaphore sem = new Semaphore(1);
-        new Producer(sem, "A");
-        new Consumer(sem, "B");
+        Runnable pr= new Producer(sem, "A");
+        Thread producer= new Thread(pr);
+
+        Runnable cons= new Consumer(sem, "B");
+        Thread consumer= new Thread(cons);
+
+
+        producer.start();
+        consumer.start();
+
     }
 }
 
@@ -22,7 +30,7 @@ class Producer implements Runnable {
     Producer(Semaphore s, String n) {
         sem = s;
         name = n;
-        new Thread(this).start();
+
     }
 
     public void run() {
@@ -49,7 +57,7 @@ class Consumer implements Runnable {
     Consumer(Semaphore s, String n) {
         sem = s;
         name = n;
-        new Thread(this).start();
+
     }
 
     public void run() {

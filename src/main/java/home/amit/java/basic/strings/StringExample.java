@@ -1,5 +1,8 @@
 package home.amit.java.basic.strings;
 
+
+// String value doesn't change in the parent function. as it is immutable
+
 import java.util.Arrays;
 
 public class StringExample {

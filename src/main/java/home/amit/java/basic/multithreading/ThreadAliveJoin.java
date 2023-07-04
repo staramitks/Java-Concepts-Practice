@@ -4,7 +4,6 @@ class MyThread implements Runnable {
 
     private String myName;
 
-
     @Override
     public void run() {
         try {
@@ -12,8 +11,7 @@ class MyThread implements Runnable {
                 System.out.println(Thread.currentThread().getName() + " Printing " + i);
                 Thread.sleep(1000);
             }
-
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
             System.out.println("Error " + e);
         }
     }

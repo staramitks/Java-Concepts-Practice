@@ -3,6 +3,8 @@ package home.amit.java.basic.multithreading;
 class Printer {
     // Initial 100 paper are set in Printer
     int noOfPaper = 100;
+    int targetPages=120;
+
 
     // Synchronized the method for inter-thread communication
     synchronized void printingPages(int pages) {
@@ -17,10 +19,11 @@ class Printer {
         // and printing will resume after that
         while (this.noOfPaper < pages) {
 
-            System.out.println("Number of Papers in printer are less");
+            int diff=pages-noOfPaper;
+            System.out.println("Number of Papers in printer are less "+diff);
             try {
                 System.out.println("Waiting...");
-                wait();
+                this.wait();
             } catch (Exception e) {
 
             }
@@ -33,9 +36,12 @@ class Printer {
 
     synchronized void addPages(int noOfPages) {
         // Adding more Papers in Printer;
-        this.noOfPaper += noOfPages;
-        // After adding the paper in printer. Notify the Paused thread;
-        notify();
+
+            this.noOfPaper += noOfPages;
+            // After adding the paper in printer. Notify the Paused thread;
+            this.notifyAll();
+
+
     }
 }
 
@@ -47,7 +53,7 @@ public class PrinterClass {
         //First thread for print the pages
         var printerThread = new Thread(() -> printer.printingPages(120));
         // Second thread for Add pages in printer
-        var pageAddThread = new Thread(() -> printer.addPages(100));
+        var pageAddThread = new Thread(() -> printer.addPages(30));
 
         printerThread.start();
         pageAddThread.start();
