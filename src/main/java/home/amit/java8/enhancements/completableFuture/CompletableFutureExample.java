@@ -28,7 +28,6 @@ public class CompletableFutureExample {
 
         var subResults = new ArrayList<Map<String, String>>();
         CompletableFuture<Map<String, String>> perfMap1 = CompletableFuture.supplyAsync(() -> getPerformanceMap());
-
         CompletableFuture<Map<String, String>> productMap1 = CompletableFuture.supplyAsync(() -> getProductsMap());
         CompletableFuture<Map<String, String>> intSlack1 = CompletableFuture.supplyAsync(() -> getInternalSlackMap());
         CompletableFuture<Map<String, String>> extSlack1 = CompletableFuture.supplyAsync(() -> getExternalSlackMap());
