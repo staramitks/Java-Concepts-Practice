@@ -28,13 +28,13 @@ public class GroupByExample {
 
         System.out.println("Grouping by average age");
 
-        ConcurrentMap<String, Double> collectDblMap = employeesList.parallelStream().collect(groupingByConcurrent(EmployeeDTO::getCity, averagingInt(EmployeeDTO::getAge)));
+        ConcurrentMap<String, Double> collectDblMap = employeesList.parallelStream().collect(Collectors.groupingByConcurrent(EmployeeDTO::getCity, Collectors.averagingInt(EmployeeDTO::getAge)));
         collectDblMap.keySet().stream().forEach(System.out::println);
         collectDblMap.values().stream().forEach(System.out::println);
 
         System.out.println("Sum of age by city ");
 
-        ConcurrentMap<String, Integer> cityAgeSumMap = employeesList.parallelStream().collect(groupingByConcurrent(EmployeeDTO::getCity, Collectors.summingInt(EmployeeDTO::getAge)));
+        ConcurrentMap<String, Integer> cityAgeSumMap = employeesList.parallelStream().collect(Collectors.groupingByConcurrent(EmployeeDTO::getCity, Collectors.summingInt(EmployeeDTO::getAge)));
 
         cityAgeSumMap.values().stream().forEach(System.out::println);
 

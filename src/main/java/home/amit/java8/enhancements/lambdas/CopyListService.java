@@ -7,6 +7,18 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
+
+/*
+
+ Example showing various mechanisms and methods to show copy list examples
+
+*/
+
+
+
+
+
 public class CopyListService {
 
     public List<Flower> copyListByConstructor(List<Flower> source) {

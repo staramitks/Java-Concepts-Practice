@@ -1,7 +1,7 @@
 package home.amit.dynamic.knapsack.unbounded;
 
 public class RodCutting {
-    public int cutRod(int[] price, int n) {
+    private int cutRod(int[] price, int n) {
         //code here
         int[][] dp = new int[n + 1][n + 1];
         int[] lengthOfRod = new int[n];

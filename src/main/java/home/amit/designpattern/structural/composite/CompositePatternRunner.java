@@ -33,9 +33,9 @@ public class CompositePatternRunner {
         //print all employees of the organization
         System.out.println(CEO);
 
-        CEO.getSubordinates().stream().forEach(e->{
+        CEO.getSubOrdinates().stream().forEach(e->{
             System.out.println(e);
-            e.getSubordinates().stream().forEach(s-> System.out.println(s));
+            e.getSubOrdinates().stream().forEach(s-> System.out.println(s));
         });
 
     }

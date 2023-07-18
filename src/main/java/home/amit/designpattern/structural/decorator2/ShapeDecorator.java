@@ -18,7 +18,6 @@ public abstract class ShapeDecorator implements Shape{
 	}
 
 	private void addBorder() {
-		// TODO Auto-generated method stub
 		System.out.println("Adding RedBorder");
 	}
 }

@@ -31,7 +31,7 @@ public class EmployeeComposite {
         subordinates.remove(e);
     }
 
-    public List<EmployeeComposite> getSubordinates(){
+    public List<EmployeeComposite> getSubOrdinates(){
         return subordinates;
     }
 

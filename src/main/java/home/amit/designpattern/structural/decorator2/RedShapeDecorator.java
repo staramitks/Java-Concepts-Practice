@@ -1,4 +1,6 @@
 package home.amit.designpattern.structural.decorator2;
+
+
 public class RedShapeDecorator extends ShapeDecorator{
 	
 public RedShapeDecorator(Shape decoratedShape) {

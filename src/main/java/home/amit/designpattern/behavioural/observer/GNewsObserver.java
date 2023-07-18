@@ -1,11 +1,11 @@
 package home.amit.designpattern.behavioural.observer;
 
-public class GNewsObersver implements Observer {
+public class GNewsObserver implements Observer {
 
 	private Subject gnews;
 	private String name;
 	
-	public  GNewsObersver(String name) {
+	public GNewsObserver(String name) {
 		this.name=name;
 }
 	@Override

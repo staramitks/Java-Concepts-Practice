@@ -25,8 +25,12 @@ public class CompareLists {
         listTwo.add(5);
 
 
+        if (listOne == listTwo)
+        {
+            System.out.println("Lists are Equal ==> listOne == listTwo ");
+        }
         if (listOne.equals(listTwo)) {
-            System.out.println("Lists are Equal");
+            System.out.println("Lists are Equal ==> listOne.equals(listTwo)");
         } else {
             System.out.println("Lists are not equal");
         }

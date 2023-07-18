@@ -3,7 +3,7 @@ package home.amit.dynamic.knapsack;
 public class ChildSteps {
 
 
-    public int getStepsCount(int n) {
+    private int getStepsCount(int n) {
         if (n == 0) {
             return 1;
         } else if (n < 0) {
@@ -15,6 +15,10 @@ public class ChildSteps {
     }
 
     public static void main(String[] args) {
+
+        ChildSteps lChildSteps= new ChildSteps();
+        int count=lChildSteps.getStepsCount(3);
+        System.out.println("Count is "+count);
 
 
     }

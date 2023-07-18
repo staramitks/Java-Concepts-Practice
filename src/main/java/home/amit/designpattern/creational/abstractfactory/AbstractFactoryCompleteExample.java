@@ -8,7 +8,7 @@ Year :- 2023
 // This is particularly useful when we need to add new objects type of same type in factory pattern
 since factory pattern alone cant do much on its own so its better to have abstract factory pattern which would not take
 specific parameter but an object of type abstract factory which would call getObject on Abstract Factory
-So EmployeeFatcory method and abstract factory main method will return employee objects
+So EmployeeFactory method and abstract factory main method will return employee objects
 */
 
 // Abstract Product A

@@ -8,7 +8,7 @@ public class Employees implements Cloneable{
 	private List<String> empList;
 	
 	public Employees(){
-		empList = new ArrayList<String>();
+		empList = new ArrayList<>();
 	}
 	
 	public Employees(List<String> list){

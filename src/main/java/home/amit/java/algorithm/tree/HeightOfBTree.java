@@ -14,15 +14,10 @@ public class HeightOfBTree {
     }
 
     private int getHeight(BTreeNode btree) {
-
-
-        if (btree == null) {
+      if (btree == null) {
             return 0;
         }
-
         int height = 1 + Integer.max(getHeight(btree.left), getHeight(btree.right));
         return height;
-
-
     }
 }

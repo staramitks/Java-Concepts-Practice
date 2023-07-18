@@ -12,11 +12,11 @@ abstract class OrderProcessTemplate
 	{ 
 		try
 		{ 
-			System.out.println("Gift wrap successfull"); 
+			System.out.println("Gift wrap is successful");
 		} 
 		catch (Exception e) 
 		{ 
-			System.out.println("Gift wrap unsuccessful"); 
+			System.out.println("Gift wrap was unsuccessful");
 		} 
 	} 
 

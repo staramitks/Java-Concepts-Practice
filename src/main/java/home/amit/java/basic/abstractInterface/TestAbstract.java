@@ -13,6 +13,8 @@ package home.amit.java.basic.abstractInterface;
  * However it is  not required to implementation of functions in interfaces
  *
  */
+
+
 public abstract class TestAbstract extends TestClass implements TestInterface, InterfaceB {
 
 

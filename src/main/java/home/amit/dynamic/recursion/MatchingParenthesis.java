@@ -2,7 +2,7 @@ package home.amit.dynamic.recursion;
 
 import java.util.ArrayList;
 
-public class MatchingParethesis {
+public class MatchingParenthesis {
 
     public static void main(String[] args) {
         int n = 3;
