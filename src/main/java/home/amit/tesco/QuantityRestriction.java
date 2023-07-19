@@ -16,6 +16,6 @@ public class QuantityRestriction implements Restriction {
 
     @Override
     public boolean isValid(String product, int boughtQty) {
-     return boughtQty<this.qty;
+     return boughtQty<=this.qty;
   }
 }
