@@ -1,13 +1,10 @@
-package home.amit.tesco.fixed;
+package home.amit.tesco;
 /*
 User :- AmitSingh
 Date :- 7/18/2023
 Time :- 8:34 PM
 Year :- 2023
 */
-
-import java.util.Map;
-import java.util.Set;
 
 public class QuantityRestriction implements Restriction {
 

@@ -1,4 +1,4 @@
-package home.amit.tesco.fixed;
+package home.amit.tesco;
 /*
 User :- AmitSingh
 Date :- 7/18/2023
@@ -51,7 +51,7 @@ import java.util.*;
 
 public class TescoRunner {
      public static void main(String[] args) {
-        home.amit.tesco.fixed.Cart cart= new Cart();
+        Cart cart= new Cart();
         cart.addItem(new ShoppingItem("1",TescoConstants.PARACETAMOL,3 ));
         cart.addItem(new ShoppingItem("2",TescoConstants.ANALEGESIC,12 ));
         cart.addItem(new ShoppingItem("3",TescoConstants.CHOCOLATE,8 ));
