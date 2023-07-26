@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class CustomUnCheckedException {
 
 
-    // Note that in case of checked exception function who is throwing excpetion is forces to declare it using throws exception
+    // Note that in case of checked exception function who is throwing exception is forced to declare it using throws exception
     // and the called is again forced to handle it
     public void testDay() {
         ArrayList<String> arrayList = new ArrayList<>();

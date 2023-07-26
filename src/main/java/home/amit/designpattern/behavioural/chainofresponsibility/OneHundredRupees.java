@@ -11,11 +11,11 @@ public class OneHundredRupees implements ChainDispenser {
 
 	@Override
 	public int dispenseCurrencyNotes(int money) {
-		int twokNotes=money/100;
+		int oneHNotes=money/100;
 		int remaining=money%100;
 		//nextChain.dispenseCurrencyNotes(remaining);
-	    System.out.println("One Hundred notes "+twokNotes);
-	    return twokNotes;
+	    System.out.println("One Hundred notes "+oneHNotes);
+	    return oneHNotes;
 	}
 
 }

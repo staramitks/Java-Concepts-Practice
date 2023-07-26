@@ -42,8 +42,6 @@ public final class CorrectImmutableStudent {
         clonedAge.setDay(this.age.getDay());
         clonedAge.setMonth(this.age.getMonth());
         clonedAge.setYear(this.age.getYear());
-
-
         return clonedAge;
     }
 

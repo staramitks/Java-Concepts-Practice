@@ -1,4 +1,4 @@
-package home.amit.lastrepeatingcharacter;
+package home.amit.java.exams.osttra;
 /*
 User :- AmitSingh
 Date :- 7/14/2023
@@ -6,7 +6,6 @@ Time :- 5:53 PM
 Year :- 2023
 */
 
-import java.io.CharConversionException;
 import java.util.*;
 
 public class LastRepeatingCharacter {
