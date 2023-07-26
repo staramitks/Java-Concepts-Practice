@@ -113,16 +113,16 @@ public class DataProvider {
 
     public List<EmployeeDTO> getEmployeesDTOList() {
         List<EmployeeDTO> empList = new ArrayList<>();
-        EmployeeDTO emp1 = new EmployeeDTO("1234", "Amit", "Agra", 30);
-        EmployeeDTO emp2 = new EmployeeDTO("2323", "sUMIT", "madra", 40);
-        EmployeeDTO emp3 = new EmployeeDTO("12342", "aKAHASH", "Chennai", 50);
-        EmployeeDTO emp4 = new EmployeeDTO("14334", "sHELLY", "Agartala", 60);
-        EmployeeDTO emp5 = new EmployeeDTO("1234", "Shalu", "Agra", 90);
-        EmployeeDTO emp6 = new EmployeeDTO("32213", "tinku", "Bangloare", 20);
-        EmployeeDTO emp7 = new EmployeeDTO("870", "Vinit", "Bangalore", 25);
-        EmployeeDTO emp8 = new EmployeeDTO("2389721", "Tam", "Punjab", 31);
-        EmployeeDTO emp9 = new EmployeeDTO("2389721", "Amiadsat", "Agra", 32);
-        EmployeeDTO emp10 = new EmployeeDTO("89709", "sddsd", "Agra", 33);
+        EmployeeDTO emp1 = new EmployeeDTO("1234", 30,"Amit", "Agra");
+        EmployeeDTO emp2 = new EmployeeDTO("2323", 36,"sUMIT", "madra");
+        EmployeeDTO emp3 = new EmployeeDTO("12342", 21,"aKAHASH", "Chennai");
+        EmployeeDTO emp4 = new EmployeeDTO("14334", 22,"sHELLY", "Agartala");
+        EmployeeDTO emp5 = new EmployeeDTO("1234", 23,"Shalu", "Agra");
+        EmployeeDTO emp6 = new EmployeeDTO("32213", 34,"tinku", "Bangloare");
+        EmployeeDTO emp7 = new EmployeeDTO("870", 34,"Vinit", "Bangalore");
+        EmployeeDTO emp8 = new EmployeeDTO("2389721", 32,"Tam", "Punjab");
+        EmployeeDTO emp9 = new EmployeeDTO("2389721", 31,"Amiadsat", "Agra");
+        EmployeeDTO emp10 = new EmployeeDTO("89709", 22,"sddsd", "Agra");
         empList.add(emp1);
         empList.add(emp2);
         empList.add(emp3);

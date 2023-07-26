@@ -1,4 +1,4 @@
-package home.amit.tesco;
+package home.amit.java.exams.tesco;
 /*
 User :- AmitSingh
 Date :- 7/18/2023

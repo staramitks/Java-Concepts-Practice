@@ -14,7 +14,7 @@ It represents part-of relationship.
 In composition, both entities are dependent on each other.
 When there is a composition between two entities, the composed object cannot exist without the other entity.
 
-Represented by Solid Diamond Symnol
+Represented by Solid Diamond Symbol
 */
 
 import java.util.ArrayList;
@@ -110,7 +110,7 @@ public class CompositionExample {
         Student s4 = new Student("Rahul", 2, "EE");
 
         // Creating a List of CSE Students
-        List<Student> cse_students = new ArrayList<Student>();
+        List<Student> cse_students = new ArrayList<>();
 
         // Adding CSE students
         cse_students.add(s1);
@@ -118,7 +118,7 @@ public class CompositionExample {
 
         // Creating a List of EE Students
         List<Student> ee_students
-                = new ArrayList<Student>();
+                = new ArrayList<>();
 
         // Adding EE students
         ee_students.add(s3);
