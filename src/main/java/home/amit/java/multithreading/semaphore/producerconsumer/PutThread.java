@@ -1,4 +1,4 @@
-package home.amit.java.multithreading.semaphore;
+package home.amit.java.multithreading.semaphore.producerconsumer;
 
 import java.util.List;
 import java.util.concurrent.Semaphore;

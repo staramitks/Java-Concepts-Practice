@@ -1,9 +1,6 @@
 package home.amit.java.multithreading;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class CalculatorExample {
 
@@ -50,8 +47,8 @@ public class CalculatorExample {
 
         executorService.shutdown();
         try {
-            System.out.println("Final Sum is " + future.get());
-        } catch (InterruptedException | ExecutionException e) {
+            System.out.println("Final Sum is " + future.get(5,TimeUnit.SECONDS));
+        } catch (InterruptedException | ExecutionException |TimeoutException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
