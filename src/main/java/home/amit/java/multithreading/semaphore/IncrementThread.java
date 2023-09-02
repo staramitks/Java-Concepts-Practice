@@ -17,21 +17,22 @@ public class IncrementThread implements Runnable {
 
     public void run() {
         System.out.println("Starting " + threadName);
-        int counter = 0;
         try {
-            sm.acquire();
-            for (int i = 0; i < 1000; i++) {
-                list.add(counter++);
-                System.out.println("Increment Counter increased size to " + list.size() + "with vaue of " + list.get(0));
-                Thread.sleep(100);
-            }
-            sm.release();
-        } catch (InterruptedException e) {
+            int counter = 0;
 
+            for (int i = 0; i < 100; i++) {
+                sm.acquire();
+                list.add(counter++);
+                System.out.println("Increment Counter increased size to " + list.size() + " with value of " + list.get(list.size()-1));
+                sm.release();
+                Thread.sleep(100);
+
+            }
+        } catch (InterruptedException e) {
             System.out.println("Thread interrupted with error as " + e);
         }
-
+//        finally {
+//            sm.release();
+//        }
     }
-
-
 }

@@ -8,10 +8,7 @@ Year :- 2023
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class ExecutorExample2 {
 
@@ -20,7 +17,11 @@ public class ExecutorExample2 {
         ExecutorService executor = Executors.newCachedThreadPool();
 
         List<Callable<Integer>> listOfCallable = Arrays.asList(
-                () -> 1,
+                () -> {
+                    TimeUnit.SECONDS.sleep(10);
+                    System.out.println("Returning 1 now ");
+                    return 1;
+                },
                 () -> 2,
                 () -> 3);
 
@@ -30,7 +31,7 @@ public class ExecutorExample2 {
 
             int sum = futures.stream().map(f -> {
                 try {
-                    return f.get();
+                    return f.get(5,TimeUnit.SECONDS);
                 } catch (Exception e) {
                     throw new IllegalStateException(e);
                 }

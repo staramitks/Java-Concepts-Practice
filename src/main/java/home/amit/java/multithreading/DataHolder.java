@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 
 public class DataHolder {
 
-    private BlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(1);
+    private BlockingQueue<Integer> queue = new ArrayBlockingQueue<>(1);
     private final boolean exitFlag = false;
 
     public DataHolder(BlockingQueue<Integer> queue) {

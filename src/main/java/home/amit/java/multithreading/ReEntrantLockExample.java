@@ -140,6 +140,8 @@ public class ReEntrantLockExample {
         pool.execute(w2);
         pool.execute(w3);
         pool.execute(w4);
+
+
         pool.shutdown();
     }
 } 

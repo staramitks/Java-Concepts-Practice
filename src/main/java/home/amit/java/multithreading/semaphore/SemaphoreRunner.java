@@ -2,6 +2,7 @@ package home.amit.java.multithreading.semaphore;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Semaphore;
 
 public class SemaphoreRunner {
@@ -12,7 +13,5 @@ public class SemaphoreRunner {
         Thread decrementThread = new Thread(new DecrementThread(semaphore, "DecrementThread", sharedList));
         incrementThread.start();
         decrementThread.start();
-
-
     }
 }
