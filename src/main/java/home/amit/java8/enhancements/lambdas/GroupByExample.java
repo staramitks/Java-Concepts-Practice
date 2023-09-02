@@ -5,9 +5,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
 import static java.util.stream.Collectors.groupingBy;
-        ;
 
-import static java.util.stream.Collectors.*;
 
 public class GroupByExample {
 

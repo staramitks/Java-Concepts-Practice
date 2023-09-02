@@ -11,13 +11,7 @@ public class ProducerConsumerExample {
         producerThread.start();
         consumerThread.start();
 
-//	try {
-//		producerThread.join();
-//		consumerThread.join();
-//	} catch (InterruptedException e) {
-//		// TODO Auto-generated catch block
-//		e.printStackTrace();
-//	}
+
 
     }
 }
