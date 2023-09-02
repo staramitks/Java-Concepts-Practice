@@ -44,16 +44,18 @@ synchronized block are reentrant in nature i.e if a thread has lock on the monit
  */
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.locks.ReentrantLock;
 
-class worker implements Runnable {
+class Worker implements Runnable {
     String name;
     ReentrantLock re;
 
-    public worker(ReentrantLock rl, String n) {
+    public Worker(ReentrantLock rl, String n) {
         re = rl;
         name = n;
     }
@@ -127,12 +129,12 @@ public class ReEntrantLockExample {
     static final int MAX_T = 2;
 
     public static void main(String[] args) {
-        ReentrantLock rel = new ReentrantLock();
+        ReentrantLock reentrantLock = new ReentrantLock();
         ExecutorService pool = Executors.newFixedThreadPool(MAX_T);
-        Runnable w1 = new home.amit.java.multithreading.worker(rel, "Job1");
-        Runnable w2 = new home.amit.java.multithreading.worker(rel, "Job2");
-        Runnable w3 = new home.amit.java.multithreading.worker(rel, "Job3");
-        Runnable w4 = new home.amit.java.multithreading.worker(rel, "Job4");
+        Runnable w1 = new Worker(reentrantLock, "Job1");
+        Runnable w2 = new Worker(reentrantLock, "Job2");
+        Runnable w3 = new Worker(reentrantLock, "Job3");
+        Runnable w4 = new Worker(reentrantLock, "Job4");
 
         pool.execute(w1);
         pool.execute(w2);
