@@ -23,7 +23,7 @@ public class IncrementThread implements Runnable {
             for (int i = 0; i < 100; i++) {
                 sm.acquire();
                 list.add(counter++);
-                System.out.println("Increment Counter increased size to " + list.size() + " with value of " + list.get(list.size()-1));
+                System.out.println("Increment Counter increased size to " + list.size() + " with value of " + list.get(list.size() - 1));
                 sm.release();
                 Thread.sleep(100);
 

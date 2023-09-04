@@ -56,7 +56,7 @@ public class EvenOddConsumer {
                 while (true) {
                     int oddCOunt = dataHolder.getOddNumber();
                     System.out.println("Get Odd Number " + oddCOunt);
-                if (oddCOunt == 99) {
+                    if (oddCOunt == 99) {
                         break;
                     }
                 }

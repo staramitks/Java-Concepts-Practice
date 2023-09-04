@@ -32,8 +32,7 @@ public class TwoSum {
             }
         }
 
-        if (!result)
-        {
+        if (!result) {
             indexArray[0] = -1;
             indexArray[1] = -1;
         }
@@ -54,14 +53,14 @@ public class TwoSum {
     }
 
     public static void main(String[] args) {
-    int[] num={10,20,30,40,50,1,34,89,232,90};
-    int target=411;
-    TwoSum twoSum= new TwoSum();
-    int[] result=twoSum.getArrayIndex(num,target);
-    System.out.println(Arrays.toString(result));
+        int[] num = {10, 20, 30, 40, 50, 1, 34, 89, 232, 90};
+        int target = 411;
+        TwoSum twoSum = new TwoSum();
+        int[] result = twoSum.getArrayIndex(num, target);
+        System.out.println(Arrays.toString(result));
 
-    int[] result2=twoSum.getArrayIndexUsingMap(num,target);
-    System.out.println(Arrays.toString(result2));
+        int[] result2 = twoSum.getArrayIndexUsingMap(num, target);
+        System.out.println(Arrays.toString(result2));
 
     }
 

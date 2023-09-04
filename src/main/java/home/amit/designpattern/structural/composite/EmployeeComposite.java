@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeComposite {
-    private String name;
-    private String dept;
-    private int salary;
-    private List<EmployeeComposite> subordinates;
+    private final String name;
+    private final String dept;
+    private final int salary;
+    private final List<EmployeeComposite> subordinates;
 
     // constructor
-    public EmployeeComposite(String name,String dept, int sal) {
+    public EmployeeComposite(String name, String dept, int sal) {
         this.name = name;
         this.dept = dept;
         this.salary = sal;
@@ -31,11 +31,11 @@ public class EmployeeComposite {
         subordinates.remove(e);
     }
 
-    public List<EmployeeComposite> getSubOrdinates(){
+    public List<EmployeeComposite> getSubOrdinates() {
         return subordinates;
     }
 
-    public String toString(){
-        return ("EmployeeComposite :[ Name : " + name + ", dept : " + dept + ", salary :" + salary+" ]");
+    public String toString() {
+        return ("EmployeeComposite :[ Name : " + name + ", dept : " + dept + ", salary :" + salary + " ]");
     }
 }

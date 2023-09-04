@@ -6,7 +6,7 @@ Time :- 10:18 PM
 Year :- 2023
 */
 
-public class Manager implements  Employee{
+public class Manager implements Employee {
 
     @Override
     public String getName() {

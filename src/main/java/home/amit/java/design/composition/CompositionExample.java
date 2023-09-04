@@ -30,8 +30,7 @@ class Student {
     String dept;
 
     // Constructor of student class
-    Student(String name, int id, String dept)
-    {
+    Student(String name, int id, String dept) {
 
         // This keyword refers to current instance itself
         this.name = name;
@@ -46,17 +45,16 @@ class Student {
 class Department {
     // Attributes of Department class
     String name;
-    private List<Student> students;
-    Department(String name, List<Student> students)
-    {
+    private final List<Student> students;
+
+    Department(String name, List<Student> students) {
         // this keyword refers to current instance itself
         this.name = name;
         this.students = students;
     }
 
     // Method of Department class
-    public List<Student> getStudents()
-    {
+    public List<Student> getStudents() {
         // Returning list of user defined type
         // Student type
         return students;
@@ -71,11 +69,10 @@ class Institute {
 
     // Attributes of Institute
     String instituteName;
-    private List<Department> departments;
+    private final List<Department> departments;
 
     // Constructor of institute class
-    Institute(String instituteName,List<Department> departments)
-    {
+    Institute(String instituteName, List<Department> departments) {
         // This keyword refers to current instance itself
         this.instituteName = instituteName;
         this.departments = departments;
@@ -84,15 +81,14 @@ class Institute {
     // Method of Institute class
     // Counting total students of all departments
     // in a given institute
-    public long getTotalStudentsInInstitute()
-    {
+    public long getTotalStudentsInInstitute() {
         long noOfStudents = 0;
         List<Student> students;
         for (Department dept : departments) {
             students = dept.getStudents();
-            noOfStudents = noOfStudents+students.stream().count();
+            noOfStudents = noOfStudents + students.stream().count();
         }
-         return noOfStudents;
+        return noOfStudents;
     }
 }
 
@@ -101,8 +97,7 @@ class Institute {
 public class CompositionExample {
 
     // main driver method
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // Creating object of Student class inside main()
         Student s1 = new Student("Mia", 1, "CSE");
         Student s2 = new Student("Priya", 2, "CSE");

@@ -13,42 +13,36 @@ import java.util.Map;
 
 public class Cart {
 
-    private List<ShoppingItem> items;
+    private final List<ShoppingItem> items;
 
 
-    public Cart(){
-        items= new ArrayList<>();
+    public Cart() {
+        items = new ArrayList<>();
     }
 
-    public void addItem(ShoppingItem product)
-    {
+    public void addItem(ShoppingItem product) {
         items.add(product);
     }
 
 
-    public void removeItem(ShoppingItem product)
-    {
+    public void removeItem(ShoppingItem product) {
         items.remove(product);
     }
 
-    public List<ShoppingItem> getItems()
-    {
+    public List<ShoppingItem> getItems() {
         return this.items;
     }
 
-    public Map<String,Integer> getItemsGroupedByCategory() {
+    public Map<String, Integer> getItemsGroupedByCategory() {
 
-        Map<String, Integer> categoryMap= new HashMap<>();
+        Map<String, Integer> categoryMap = new HashMap<>();
 
-        for (ShoppingItem p : this.getItems())
-        {
+        for (ShoppingItem p : this.getItems()) {
             if (!categoryMap.containsKey(p.getCategory())) {
                 categoryMap.put(p.getCategory(), p.getQuantity());
-            }
-            else
-            {
-                int qty=categoryMap.get(p.getCategory());
-                categoryMap.put(p.getCategory(), qty+p.getQuantity());
+            } else {
+                int qty = categoryMap.get(p.getCategory());
+                categoryMap.put(p.getCategory(), qty + p.getQuantity());
             }
         }
 
@@ -56,8 +50,6 @@ public class Cart {
 
 
     }
-
-
 
 
 }

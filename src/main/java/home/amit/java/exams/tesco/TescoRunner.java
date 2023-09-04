@@ -46,32 +46,35 @@ For the above given example, the restriction status returned would be MET.
 
  */
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class TescoRunner {
-     public static void main(String[] args) {
-        Cart cart= new Cart();
-        cart.addItem(new ShoppingItem("1",TescoConstants.PARACETAMOL,3 ));
-        cart.addItem(new ShoppingItem("2",TescoConstants.ANALEGESIC,10 ));
-        cart.addItem(new ShoppingItem("3",TescoConstants.CHOCOLATE,8 ));
-        cart.addItem(new ShoppingItem("4",TescoConstants.PARACETAMOL,2 ));
+    public static void main(String[] args) {
+        Cart cart = new Cart();
+        cart.addItem(new ShoppingItem("1", TescoConstants.PARACETAMOL, 3));
+        cart.addItem(new ShoppingItem("2", TescoConstants.ANALEGESIC, 10));
+        cart.addItem(new ShoppingItem("3", TescoConstants.CHOCOLATE, 8));
+        cart.addItem(new ShoppingItem("4", TescoConstants.PARACETAMOL, 2));
 
 
-        Map<String, Integer> categoryMap= new HashMap<>();
-        categoryMap.put(TescoConstants.PARACETAMOL,5);
+        Map<String, Integer> categoryMap = new HashMap<>();
+        categoryMap.put(TescoConstants.PARACETAMOL, 5);
 
-        Restriction qtyRestriction= new QuantityRestriction(10);
-        Restriction categoryRestriction= new CategoryRestriction(categoryMap);
+        Restriction qtyRestriction = new QuantityRestriction(10);
+        Restriction categoryRestriction = new CategoryRestriction(categoryMap);
 
-        List<Restriction> restrictionRulesList= new ArrayList<>();
+        List<Restriction> restrictionRulesList = new ArrayList<>();
         restrictionRulesList.add(qtyRestriction);
         restrictionRulesList.add(categoryRestriction);
 
-        RestrictionRuleEngine restrictionRuleEngine= new RestrictionRuleEngine(restrictionRulesList);
+        RestrictionRuleEngine restrictionRuleEngine = new RestrictionRuleEngine(restrictionRulesList);
 
-        String output=restrictionRuleEngine.applyRestrictions(cart);
-        System.out.println("Output is "+output);
+        String output = restrictionRuleEngine.applyRestrictions(cart);
+        System.out.println("Output is " + output);
 
     }
 }

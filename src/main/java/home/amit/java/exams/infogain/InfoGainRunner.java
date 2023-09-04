@@ -11,13 +11,10 @@ import java.util.List;
 
 public class InfoGainRunner {
 
-    private void printEventNumbers(List<Integer> array)
-    {
+    private void printEventNumbers(List<Integer> array) {
 
-        for (int n:array)
-        {
-            if (isPowerOfTwo(n))
-            {
+        for (int n : array) {
+            if (isPowerOfTwo(n)) {
                 System.out.println(n);
             }
         }
@@ -25,18 +22,17 @@ public class InfoGainRunner {
 
     }
 
-    private boolean isPowerOfTwo(int num)
-    {
+    private boolean isPowerOfTwo(int num) {
 
-        return ( num>0 && ((num & (num-1)) ==0) );
+        return (num > 0 && ((num & (num - 1)) == 0));
     }
 
 
     public static void main(String[] args) {
 
-    InfoGainRunner infoGainRunner= new InfoGainRunner();
+        InfoGainRunner infoGainRunner = new InfoGainRunner();
 
-    infoGainRunner.printEventNumbers(Arrays.asList(1,2,3,4,5,6,7,8));
+        infoGainRunner.printEventNumbers(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8));
 
 
     }

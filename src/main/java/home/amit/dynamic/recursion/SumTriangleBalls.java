@@ -11,7 +11,7 @@ Month Name Short :- Jun
 public class SumTriangleBalls {
 
     public static void main(String... args) {
-        SumTriangleBalls sumTriangleBalls= new SumTriangleBalls();
+        SumTriangleBalls sumTriangleBalls = new SumTriangleBalls();
         System.out.println(sumTriangleBalls.getSum(1000));
 
     }

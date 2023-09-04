@@ -47,8 +47,8 @@ public class CalculatorExample {
 
         executorService.shutdown();
         try {
-            System.out.println("Final Sum is " + future.get(5,TimeUnit.SECONDS));
-        } catch (InterruptedException | ExecutionException |TimeoutException e) {
+            System.out.println("Final Sum is " + future.get(5, TimeUnit.SECONDS));
+        } catch (InterruptedException | ExecutionException | TimeoutException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

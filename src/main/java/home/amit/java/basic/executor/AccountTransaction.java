@@ -12,9 +12,9 @@ public class AccountTransaction {
     }
 
 
-    public  void withdraw(long amount) {
+    public void withdraw(long amount) {
 
-        synchronized(this) {
+        synchronized (this) {
             while (account.getBalance() < amount) {
 
                 System.out.println("Less balance so holding withdrawal now...");
@@ -36,7 +36,7 @@ public class AccountTransaction {
 
 
     public void deposit(long amount) {
-        synchronized(this) {
+        synchronized (this) {
             System.out.println("Depositing money and notifying other waiting threads ");
             account.setBalance(account.getBalance() + amount);
             notifyAll();

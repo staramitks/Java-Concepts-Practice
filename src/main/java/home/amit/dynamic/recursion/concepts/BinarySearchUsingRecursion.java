@@ -6,13 +6,10 @@ Time :- 7:51 PM
 Year :- 2023
 */
 
-import home.amit.java.algorithm.search.BinarySearch;
-import home.amit.java8.enhancements.defaultexamples.B;
-
 public class BinarySearchUsingRecursion {
 
     public static void main(String[] args) {
-        int[] array={1,2,3,5,6,7,8,9,10,12};
+        int[] array = {1, 2, 3, 5, 6, 7, 8, 9, 10, 12};
         int target = 10;
 
         boolean found = binarySearch(array, target);

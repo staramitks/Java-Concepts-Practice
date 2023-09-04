@@ -11,7 +11,7 @@ public class FinalForth implements Second, Third {
 
     public static void main(String[] Args) {
 
-        FinalForth lFinalForth= new FinalForth();
+        FinalForth lFinalForth = new FinalForth();
         lFinalForth.hello();
 
     }

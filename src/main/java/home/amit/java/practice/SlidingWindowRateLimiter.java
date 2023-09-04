@@ -14,41 +14,36 @@ public class SlidingWindowRateLimiter {
 
     int limit;
     long windowTimeLimit;
-    List<Long> lastInsertionTime= new LinkedList<>();
-    List<Integer> processedRequestsList= new ArrayList<>();
+    List<Long> lastInsertionTime = new LinkedList<>();
+    List<Integer> processedRequestsList = new ArrayList<>();
 
-    public SlidingWindowRateLimiter(int limit, int windowTimeLimit)
-    {
-        this.limit=limit;
-        this.windowTimeLimit=windowTimeLimit;
+    public SlidingWindowRateLimiter(int limit, int windowTimeLimit) {
+        this.limit = limit;
+        this.windowTimeLimit = windowTimeLimit;
 
     }
-    public boolean processRequest( int requestCount)
-    {
-        long requestTime=System.currentTimeMillis();
-        if (processedRequestsList.size()<limit) {
+
+    public boolean processRequest(int requestCount) {
+        long requestTime = System.currentTimeMillis();
+        if (processedRequestsList.size() < limit) {
             if (lastInsertionTime.isEmpty()) {
                 processedRequestsList.add(requestCount);
                 lastInsertionTime.add(requestTime);
                 return true;
-            }
-            else{
-                long lastProcessedTime=lastInsertionTime.get(lastInsertionTime.size()-1);
-                if (lastProcessedTime+this.windowTimeLimit > requestTime)
-                {
+            } else {
+                long lastProcessedTime = lastInsertionTime.get(lastInsertionTime.size() - 1);
+                if (lastProcessedTime + this.windowTimeLimit > requestTime) {
                     processedRequestsList.add(requestCount);
                     lastInsertionTime.add(requestTime);
                     return true;
 
                 }
             }
-        }
-        else
-        {
+        } else {
             return false;
         }
 
-      return false;
+        return false;
 
     }
 
@@ -56,11 +51,10 @@ public class SlidingWindowRateLimiter {
     public static void main(String[] args) {
 
 
-        SlidingWindowRateLimiter slidingWindowRateLimiter= new SlidingWindowRateLimiter(21, 10000);
-        for (int i=0;i<22;i++)
-        {
-            boolean processingStatus=slidingWindowRateLimiter.processRequest(i);
-            System.out.println("Processing status of "+i + " is "+processingStatus);
+        SlidingWindowRateLimiter slidingWindowRateLimiter = new SlidingWindowRateLimiter(21, 10000);
+        for (int i = 0; i < 22; i++) {
+            boolean processingStatus = slidingWindowRateLimiter.processRequest(i);
+            System.out.println("Processing status of " + i + " is " + processingStatus);
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {

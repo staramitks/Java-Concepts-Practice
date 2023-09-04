@@ -10,14 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Broker {
-    private List<Order> orderList = new ArrayList<>();
+    private final List<Order> orderList = new ArrayList<>();
 
-    public void takeOrder(Order order){
+    public void takeOrder(Order order) {
         orderList.add(order);
     }
 
-    public void placeOrders(){
-        orderList.parallelStream().forEach(o->o.execute());
+    public void placeOrders() {
+        orderList.parallelStream().forEach(o -> o.execute());
         orderList.clear();
     }
 }

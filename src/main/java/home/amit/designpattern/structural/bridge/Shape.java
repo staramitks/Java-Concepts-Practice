@@ -9,5 +9,5 @@ Year :- 2023
 
 // Abstraction Interface
 interface Shape {
- void draw();
+    void draw();
 }

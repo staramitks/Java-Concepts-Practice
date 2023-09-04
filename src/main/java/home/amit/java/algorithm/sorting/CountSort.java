@@ -25,31 +25,26 @@ import java.util.Arrays;
 public class CountSort {
 
 
-
-
     public static void main(String[] args) {
 
-        int[] inputArray={1,2,3,5,6,4,3,2,3,4,5,3,3,2};
-        int maxval=9;
-        int[] result=new int[maxval+1];
+        int[] inputArray = {1, 2, 3, 5, 6, 4, 3, 2, 3, 4, 5, 3, 3, 2};
+        int maxval = 9;
+        int[] result = new int[maxval + 1];
 
 
-        for (int i:inputArray)
-        {
-            result[i]=result[i]+1;
+        for (int i : inputArray) {
+            result[i] = result[i] + 1;
         }
-        int j=0;
-        for (int i=0;i<result.length;i++)
-        {
-           int bucket=result[i];
-           while (bucket>0)
-           {
-               inputArray[j++]=i;
-               bucket--;
-           }
+        int j = 0;
+        for (int i = 0; i < result.length; i++) {
+            int bucket = result[i];
+            while (bucket > 0) {
+                inputArray[j++] = i;
+                bucket--;
+            }
 
         }
 
-        System.out.println("Sorted Values "+ Arrays.toString(inputArray));
+        System.out.println("Sorted Values " + Arrays.toString(inputArray));
     }
 }

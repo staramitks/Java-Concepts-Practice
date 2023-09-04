@@ -18,17 +18,16 @@ public class DecrementThread implements Runnable {
     public void run() {
         System.out.println(threadName + " is waiting for the permit");
         try {
-            int removedElement=-1;
+            int removedElement = -1;
             for (int i = 0; i < 100; i++) {
                 sm.acquire();
-                if (list.size()>=1)
-                {
+                if (list.size() >= 1) {
 
-                removedElement = list.remove(0);
-                System.out.println("Decrement Counter removed " + removedElement);
-                Thread.sleep(10);
+                    removedElement = list.remove(0);
+                    System.out.println("Decrement Counter removed " + removedElement);
+                    Thread.sleep(10);
 
-            }
+                }
                 sm.release();
             }
         } catch (InterruptedException e) {

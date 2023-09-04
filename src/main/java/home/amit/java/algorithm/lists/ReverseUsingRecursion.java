@@ -11,8 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ReverseUsingRecursion {
-   public static <T> void revlist(List<T> list)
-    {
+    public static <T> void revlist(List<T> list) {
         // base condition when the list size is 0
         if (list.size() <= 1 || list == null)
             return;
@@ -29,13 +28,13 @@ public class ReverseUsingRecursion {
         // add the first value at the end
         list.add(value);
     }
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         System.out.println(
                 "Reverse order of given List :- ");
 
         List<String> gfg = new ArrayList<>(
-                Arrays.asList("PLATFORM", "LEARNING",  "BEST", "THE", "IS", "GFG"));
+                Arrays.asList("PLATFORM", "LEARNING", "BEST", "THE", "IS", "GFG"));
 
         revlist(gfg);
 

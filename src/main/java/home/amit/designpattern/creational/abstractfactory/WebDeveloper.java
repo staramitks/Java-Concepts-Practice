@@ -6,8 +6,7 @@ Time :- 10:05 PM
 Year :- 2023
 */
 
-public class WebDeveloper implements  Employee
-{
+public class WebDeveloper implements Employee {
     @Override
     public String getName() {
         return "Web Developer";

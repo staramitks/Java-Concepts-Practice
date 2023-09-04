@@ -17,5 +17,6 @@ public class ArrayDequeExample {
         deque.add("Karan");
         deque.add("Ajay");
         deque.stream().forEach(System.out::println);
+
     }
 }

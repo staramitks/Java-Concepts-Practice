@@ -16,9 +16,9 @@ public class ChildSteps {
 
     public static void main(String[] args) {
 
-        ChildSteps lChildSteps= new ChildSteps();
-        int count=lChildSteps.getStepsCount(3);
-        System.out.println("Count is "+count);
+        ChildSteps lChildSteps = new ChildSteps();
+        int count = lChildSteps.getStepsCount(3);
+        System.out.println("Count is " + count);
 
 
     }

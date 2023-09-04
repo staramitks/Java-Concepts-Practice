@@ -29,7 +29,7 @@ class Counter implements Runnable {
     @Override
     public void run() {
 
-      incrementAndDecrement();
+        incrementAndDecrement();
     }
 
 
@@ -63,6 +63,6 @@ public class RaceConditionDemo {
             e.printStackTrace();
         }
 
-        System.out.println("Final Value is "+counter.getValue());
+        System.out.println("Final Value is " + counter.getValue());
     }
 }

@@ -21,9 +21,9 @@ import java.util.List;
 public class ProducerConsumerBasicExample {
 
     public static void main(String[] args) {
-        List<Integer> list= new ArrayList<>();
-        Thread myProducer= new MyProducer(list, "MyProducer");
-        Thread myConsumer= new MyConsumer(list, "MyConsumer");
+        List<Integer> list = new ArrayList<>();
+        Thread myProducer = new MyProducer(list, "MyProducer");
+        Thread myConsumer = new MyConsumer(list, "MyConsumer");
         myConsumer.start();
         myProducer.start();
     }
@@ -32,25 +32,23 @@ public class ProducerConsumerBasicExample {
 }
 
 
+class MyProducer extends Thread {
 
-class MyProducer extends Thread{
+    private final List<Integer> list;
+    private int counter = 0;
 
-    private List<Integer> list;
-    private int counter=0;
-    public MyProducer( List<Integer> list, String threadName)
-    {
+    public MyProducer(List<Integer> list, String threadName) {
         super(threadName);
-        this.list=list;
+        this.list = list;
     }
 
 
     @Override
-    public void run()
-    {
+    public void run() {
 
         synchronized (list) {
             while (true) {
-                while (list.size()>0) {
+                while (list.size() > 0) {
                     try {
                         list.wait();
                     } catch (InterruptedException e) {
@@ -68,20 +66,20 @@ class MyProducer extends Thread{
     }
 
 }
-class MyConsumer extends Thread{
-    private List<Integer> list;
-    public MyConsumer( List<Integer> list, String threadName)
-    {
+
+class MyConsumer extends Thread {
+    private final List<Integer> list;
+
+    public MyConsumer(List<Integer> list, String threadName) {
         super(threadName);
-        this.list=list;
+        this.list = list;
     }
 
     @Override
-    public void run()
-    {
+    public void run() {
         synchronized (list) {
             while (true) {
-                while (list.size()==0) {
+                while (list.size() == 0) {
                     try {
                         list.wait();
                     } catch (InterruptedException e) {

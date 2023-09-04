@@ -22,5 +22,4 @@ public class Course implements Cloneable {
         return super.clone();
     }
 
-
 }

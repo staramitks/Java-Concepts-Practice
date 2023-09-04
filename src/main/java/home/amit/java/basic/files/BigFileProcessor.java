@@ -7,11 +7,13 @@ Year :- 2023
 Reference :- https://www.baeldung.com/java-read-lines-large-file
 */
 
-import home.amit.java8.enhancements.defaultexamples.B;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SeekableByteChannel;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.Scanner;
@@ -29,13 +31,12 @@ public class BigFileProcessor {
 
     }
 
-    public void processByScanner(String filepath) throws Exception
-    {
+    public void processByScanner(String filepath) throws Exception {
         FileInputStream inputStream = null;
         Scanner sc = null;
         try {
             inputStream = new FileInputStream(filepath);
-            sc = new Scanner(inputStream, "UTF-8");
+            sc = new Scanner(inputStream, StandardCharsets.UTF_8);
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
             }
@@ -55,8 +56,7 @@ public class BigFileProcessor {
 
     }
 
-    public void processBySeekableByteChannel(String filepath)
-    {
+    public void processBySeekableByteChannel(String filepath) {
         try (SeekableByteChannel ch = java.nio.file.Files.newByteChannel(Paths.get(filepath), StandardOpenOption.READ)) {
             ByteBuffer bf = ByteBuffer.allocate(1000);
             while (ch.read(bf) > 0) {
@@ -71,8 +71,7 @@ public class BigFileProcessor {
 
     }
 
-    public void processByBufferedReader(String filepath)
-    {
+    public void processByBufferedReader(String filepath) {
         try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
             while (br.readLine() != null) {
                 System.out.println(br.readLine());
@@ -84,12 +83,10 @@ public class BigFileProcessor {
     }
 
 
-
-
     public static void main(String[] args) {
 
-        String filepath="F:\\Amit\\Development\\Workspace-stuff\\BigFile.txt";
-        BigFileProcessor bigFileProcessor= new BigFileProcessor();
+        String filepath = "F:\\Amit\\Development\\Workspace-stuff\\BigFile.txt";
+        BigFileProcessor bigFileProcessor = new BigFileProcessor();
         try {
             bigFileProcessor.processByStreamAPi(filepath);
         } catch (IOException e) {

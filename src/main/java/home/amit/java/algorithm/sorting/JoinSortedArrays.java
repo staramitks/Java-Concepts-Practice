@@ -11,11 +11,11 @@ Month Name Short :- Jun
 public class JoinSortedArrays {
 
     public static void main(String[] args) {
-        JoinSortedArrays joinSortedArrays= new JoinSortedArrays();
-        int[] leftArray={10,20,30,40};
-        int[] rightArray={25,35,50,60,70,80};
-        int[] result=new int[leftArray.length+rightArray.length-1];
-        joinSortedArrays.joinArray(leftArray,rightArray,result);
+        JoinSortedArrays joinSortedArrays = new JoinSortedArrays();
+        int[] leftArray = {10, 20, 30, 40};
+        int[] rightArray = {25, 35, 50, 60, 70, 80};
+        int[] result = new int[leftArray.length + rightArray.length - 1];
+        joinSortedArrays.joinArray(leftArray, rightArray, result);
     }
 
 
@@ -50,7 +50,6 @@ public class JoinSortedArrays {
         return resultArray;
 
     }
-
 
 
 }

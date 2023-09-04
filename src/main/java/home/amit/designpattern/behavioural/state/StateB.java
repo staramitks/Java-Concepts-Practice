@@ -6,8 +6,6 @@ Time :- 10:10 AM
 Year :- 2023
 */
 
-import javax.naming.Context;
-
 class StateB implements State {
     @Override
     public void doAction(StateContext context) {

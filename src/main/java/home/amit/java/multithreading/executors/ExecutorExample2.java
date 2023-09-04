@@ -31,7 +31,7 @@ public class ExecutorExample2 {
 
             int sum = futures.stream().map(f -> {
                 try {
-                    return f.get(5,TimeUnit.SECONDS);
+                    return f.get(5, TimeUnit.SECONDS);
                 } catch (Exception e) {
                     throw new IllegalStateException(e);
                 }

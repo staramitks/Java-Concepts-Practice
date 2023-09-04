@@ -1,6 +1,7 @@
 package home.amit.designpattern.structural.adapter;
 
-public interface AdvancedMediaPlayer {	
-	   public void playVlc(String fileName);
-	   public void playMp4(String fileName);
-	}
+public interface AdvancedMediaPlayer {
+    void playVlc(String fileName);
+
+    void playMp4(String fileName);
+}

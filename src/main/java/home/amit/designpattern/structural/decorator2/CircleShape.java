@@ -1,11 +1,11 @@
 package home.amit.designpattern.structural.decorator2;
 
-public class CircleShape implements Shape{
+public class CircleShape implements Shape {
 
-	@Override
-	public void draw() {
+    @Override
+    public void draw() {
 
-		System.out.println("Circle Drawn");
-	}
+        System.out.println("Circle Drawn");
+    }
 
 }

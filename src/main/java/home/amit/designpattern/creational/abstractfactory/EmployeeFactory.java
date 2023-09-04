@@ -9,8 +9,7 @@ Year :- 2023
 public class EmployeeFactory {
 
 
-
-    public Employee getEmployee(AbstractEmployeeFactory abstractEmployeeFactory){
+    public Employee getEmployee(AbstractEmployeeFactory abstractEmployeeFactory) {
         return abstractEmployeeFactory.createEmployee();
     }
 }

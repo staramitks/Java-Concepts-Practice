@@ -7,5 +7,5 @@ Year :- 2023
 */
 
 public enum RatePlanEnum {
-    DOMESTIC , INSTITUTIONAL, CORPORATE
+    DOMESTIC, INSTITUTIONAL, CORPORATE
 }

@@ -26,7 +26,7 @@ public class PriorityQueueExample {
 
     public static void main(String... args) {
 
-        PriorityQueue<Employee> empPriorityQueue = new PriorityQueue<>((e1, e2) -> e2.getAge() - e1.getAge());
+        PriorityQueue<Employee> empPriorityQueue = new PriorityQueue<>();
         List<Employee> employees = DataProvider.getEmployees();
         Collections.sort(employees);
         employees.stream().forEach(e -> System.out.println(e.getAge()));
