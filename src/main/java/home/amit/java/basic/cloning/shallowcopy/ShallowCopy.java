@@ -5,7 +5,7 @@ class Student implements Cloneable {
     String name;
     Course course;
 
-    public Student(int id, String name, Course course) {
+   public Student(int id, String name, Course course) {
         this.id = id;
         this.name = name;
         this.course = course;
@@ -14,6 +14,7 @@ class Student implements Cloneable {
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+
     @Override
     public String toString() {
         return "Student{" +

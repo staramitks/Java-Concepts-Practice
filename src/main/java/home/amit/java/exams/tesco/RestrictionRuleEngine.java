@@ -11,30 +11,25 @@ import java.util.Map;
 
 public class RestrictionRuleEngine {
 
-    private List<Restriction> restrictionRules;
+    private final List<Restriction> restrictionRules;
 
-    public RestrictionRuleEngine(List<Restriction> restrictionRules)
-    {
-        this.restrictionRules=restrictionRules;
+    public RestrictionRuleEngine(List<Restriction> restrictionRules) {
+        this.restrictionRules = restrictionRules;
     }
 
 
-    public String applyRestrictions(Cart cartProducts)
-    {
+    public String applyRestrictions(Cart cartProducts) {
 
         Map<String, Integer> itemsGroupedByCategory = cartProducts.getItemsGroupedByCategory();
 
-        String result="MET";
+        String result = "MET";
 
 
-        for (Map.Entry<String, Integer> entry: itemsGroupedByCategory.entrySet())
-        {
-            for (Restriction rule:restrictionRules )
-            {
+        for (Map.Entry<String, Integer> entry : itemsGroupedByCategory.entrySet()) {
+            for (Restriction rule : restrictionRules) {
 
-                if (!rule.isValid(entry.getKey(), entry.getValue()))
-                {
-                    result="BREACHED";
+                if (!rule.isValid(entry.getKey(), entry.getValue())) {
+                    result = "BREACHED";
                     break;
                 }
             }

@@ -8,14 +8,12 @@ Year :- 2023
 
 public class StringReverseUsingRecursion {
 
-    private String reverseString(String input)
-    {
-        if (input ==null || input.length()<=1)
-        {
+    private String reverseString(String input) {
+        if (input == null || input.length() <= 1) {
             return input;
         }
 
-        String output=input.substring(input.length()-1, input.length())+reverseString(input.substring(0,input.length()-1));
+        String output = input.substring(input.length() - 1) + reverseString(input.substring(0, input.length() - 1));
         return output;
 
     }
@@ -23,8 +21,8 @@ public class StringReverseUsingRecursion {
 
     public static void main(String[] args) {
 
-        String myname="amitkumarsingh";
-        StringReverseUsingRecursion stringReverseUsingRecursion= new StringReverseUsingRecursion();
+        String myname = "amitkumarsingh";
+        StringReverseUsingRecursion stringReverseUsingRecursion = new StringReverseUsingRecursion();
         System.out.println(stringReverseUsingRecursion.reverseString(myname));
 
 

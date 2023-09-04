@@ -11,5 +11,6 @@ Year :- 2023
 interface Employee {
 
     String getName();
+
     int getSalary();
 }

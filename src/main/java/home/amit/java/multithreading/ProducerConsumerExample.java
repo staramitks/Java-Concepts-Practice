@@ -12,6 +12,5 @@ public class ProducerConsumerExample {
         consumerThread.start();
 
 
-
     }
 }

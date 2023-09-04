@@ -16,9 +16,6 @@ import java.util.stream.Stream;
 */
 
 
-
-
-
 public class CopyListService {
 
     public List<Flower> copyListByConstructor(List<Flower> source) {

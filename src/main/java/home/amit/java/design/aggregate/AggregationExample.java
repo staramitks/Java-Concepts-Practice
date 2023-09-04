@@ -30,30 +30,28 @@ import java.util.Set;
 class Bank {
 
     // Attributes of bank
-    private String name;
+    private final String name;
 
     private Set<Employee> employees;
+
     // Constructor of this class
-    Bank(String name)
-    {
+    Bank(String name) {
         // this keyword refers to current instance itself
         this.name = name;
     }
 
     // Method of Bank class
-    public String getBankName()
-    {
+    public String getBankName() {
         // Returning name of bank
         return this.name;
     }
 
-    public void setEmployees(Set<Employee> employees)
-    {
+    public void setEmployees(Set<Employee> employees) {
         this.employees = employees;
     }
+
     public Set<Employee>
-    getEmployees(Set<Employee> employees)
-    {
+    getEmployees(Set<Employee> employees) {
         return this.employees;
     }
 }
@@ -62,17 +60,16 @@ class Bank {
 // Employee class
 class Employee {
     // Attributes of employee
-    private String name;
+    private final String name;
+
     // Employee name
-    Employee(String name)
-    {
+    Employee(String name) {
         // This keyword refers to current instance itself
         this.name = name;
     }
 
     // Method of Employee class
-    public String getEmployeeName()
-    {
+    public String getEmployeeName() {
         // returning the name of employee
         return this.name;
     }
@@ -84,8 +81,7 @@ class Employee {
 class AggregationExample {
 
     // Main driver method
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         // Creating objects of bank and Employee class
         Bank bank = new Bank("ICICI");

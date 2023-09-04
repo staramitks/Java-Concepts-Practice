@@ -6,11 +6,11 @@ public class SemaphoreLocks {
 
     public static void main(String[] args) {
         Semaphore sem = new Semaphore(1);
-        Runnable pr= new Producer(sem, "A");
-        Thread producer= new Thread(pr);
+        Runnable pr = new Producer(sem, "A");
+        Thread producer = new Thread(pr);
 
-        Runnable cons= new Consumer(sem, "B");
-        Thread consumer= new Thread(cons);
+        Runnable cons = new Consumer(sem, "B");
+        Thread consumer = new Thread(cons);
 
 
         producer.start();

@@ -1,4 +1,5 @@
 package home.amit.designpattern.creational.prototype;
+
 import java.util.List;
 
 /*
@@ -15,21 +16,21 @@ The better approach would be to clone the existing object
 
 public class PrototypePatternTest {
 
-	public static void main(String[] args) throws CloneNotSupportedException {
-		Employees emps = new Employees();
-		emps.loadData();
-		
-		//Use the clone method to get the Employee object
-		Employees empsNew = (Employees) emps.clone();
-		Employees empsNew1 = (Employees) emps.clone();
-		List<String> list = empsNew.getEmpList();
-		list.add("John");
-		List<String> list1 = empsNew1.getEmpList();
-		list1.remove("Pankaj");
-		
-		System.out.println("Orignal emps List: "+emps.getEmpList());
-		System.out.println("Original cloned and added empsNew List: "+list);
-		System.out.println("empsNew1 List: "+list1);
-	}
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Employees emps = new Employees();
+        emps.loadData();
+
+        //Use the clone method to get the Employee object
+        Employees empCloned = (Employees) emps.clone();
+        Employees empsClonedNew = (Employees) emps.clone();
+        List<String> list = empCloned.getEmpList();
+        list.add("John");
+        List<String> list1 = empsClonedNew.getEmpList();
+        list1.remove("Pankaj");
+
+        System.out.println("Orignal emps List: " + emps.getEmpList());
+        System.out.println("Original cloned and added  List: " + list);
+        System.out.println("empsNew1 List: " + list1);
+    }
 
 }

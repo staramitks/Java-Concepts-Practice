@@ -15,28 +15,24 @@ import java.util.Map;
 
 public class HashMapHashTableRunner {
 
-    private void testHashTable()
-    {
-        Hashtable<String,String> myht= new Hashtable<>();
-        myht.put("Test","123");
-        myht.put("Test2",null);
+    private void testHashTable() {
+        Hashtable<String, String> myht = new Hashtable<>();
+        myht.put("Test", "123");
+        myht.put("Test2", null);
     }
 
 
-
-    private void testHashMap()
-    {
-        Map<String,String> myHashMap= new HashMap<>();
-        myHashMap.put("Test","123");
-        myHashMap.put("Test2",null);
-        myHashMap.put(null,"Blas");
+    private void testHashMap() {
+        Map<String, String> myHashMap = new HashMap<>();
+        myHashMap.put("Test", "123");
+        myHashMap.put("Test2", null);
+        myHashMap.put(null, "Blas");
         System.out.println(myHashMap.get(null));
     }
 
 
-
     public static void main(String[] args) {
-        HashMapHashTableRunner lHashMapHashTableRunner= new HashMapHashTableRunner();
+        HashMapHashTableRunner lHashMapHashTableRunner = new HashMapHashTableRunner();
         lHashMapHashTableRunner.testHashMap();
         lHashMapHashTableRunner.testHashTable();
 

@@ -6,7 +6,7 @@ Time :- 10:24 PM
 Year :- 2023
 
 // This is particularly useful when we need to add new objects type of same type in factory pattern
-since factory pattern alone cant do much on its own so its better to have abstract factory pattern which would not take
+since factory pattern alone can't do much on its own so it's better to have abstract factory pattern which would not take
 specific parameter but an object of type abstract factory which would call getObject on Abstract Factory
 So EmployeeFactory method and abstract factory main method will return employee objects
 */
@@ -56,6 +56,7 @@ class ConcreteProductB2 implements ProductB {
 // Abstract Factory
 interface AbstractFactory {
     ProductA createProductA();
+
     ProductB createProductB();
 }
 

@@ -6,7 +6,7 @@ Time :- 10:20 PM
 Year :- 2023
 */
 
-public class ManagerFactory extends AbstractEmployeeFactory{
+public class ManagerFactory extends AbstractEmployeeFactory {
 
     @Override
     public Employee createEmployee() {

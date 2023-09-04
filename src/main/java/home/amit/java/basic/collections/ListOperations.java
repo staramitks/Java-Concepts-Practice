@@ -12,8 +12,7 @@ public class ListOperations {
         listOperations.getSum();
         listOperations.getMax();
         listOperations.getMin();
-
-    }
+   }
 
     private void checkAddNum() {
         var intList = new ArrayList<Integer>();
@@ -35,23 +34,30 @@ public class ListOperations {
     private void getSum() {
         ArrayList<Integer> intList = getIntegersList();
         int sumResult = intList.stream().reduce((i, j) -> i + j).get();
-        int otherWay=intList.stream().reduce(Integer::sum).get();
+        int otherWay = intList.stream().reduce(Integer::sum).get();
         System.out.println("Result is " + sumResult);
     }
 
     private void getMin() {
         ArrayList<Integer> intList = getIntegersList();
         int min = intList.stream().reduce((i, j) -> i < j ? i : j).get();
-        int otherWay=intList.stream().reduce(Integer::min).get();
-        System.out.println("Result is " + min);
+        int otherWay = intList.stream().reduce(Integer::min).get();
+        int thirdWay = intList.stream().min(Integer::compareTo).get();
+        System.out.println("getMin Result is " + min);
+        System.out.println("getMin otherWay is " + otherWay);
+        System.out.println("getMin thirdWay is " + thirdWay);
     }
 
     private void getMax() {
         ArrayList<Integer> intList = getIntegersList();
         int max = intList.stream().reduce((i, j) -> i > j ? i : j).get();
-        int otherWay=intList.stream().reduce(Integer::max).get();
-        System.out.println("Result is " + max);
+        int otherWay = intList.stream().reduce(Integer::max).get();
+        int thirdWay = intList.stream().max(Integer::compareTo).get();
+        System.out.println("getMax Result is " + max);
+        System.out.println("getMax otherWay is " + otherWay);
+        System.out.println("getMax thirdWay is " + thirdWay);
     }
+
 
     private ArrayList<Integer> getIntegersList() {
         var intList = new ArrayList<Integer>();

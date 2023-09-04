@@ -6,10 +6,10 @@ import java.time.temporal.TemporalAdjusters;
 
 public class ThirdThursdayOfYearAndMonth {
 
-    private LocalDate ldate;
-    public ThirdThursdayOfYearAndMonth(LocalDate localDate)
-    {
-        this.ldate=localDate;
+    private final LocalDate ldate;
+
+    public ThirdThursdayOfYearAndMonth(LocalDate localDate) {
+        this.ldate = localDate;
     }
 
     private int getThirdThursdayOfYearAndMonth() {
@@ -23,7 +23,7 @@ public class ThirdThursdayOfYearAndMonth {
 
     public static void main(String[] args) {
         ThirdThursdayOfYearAndMonth thirdThursdayOfYearAndMonth = new ThirdThursdayOfYearAndMonth(LocalDate.now());
-        System.out.println(" "+thirdThursdayOfYearAndMonth.getThirdThursdayOfYearAndMonth());
+        System.out.println(" " + thirdThursdayOfYearAndMonth.getThirdThursdayOfYearAndMonth());
 
     }
 

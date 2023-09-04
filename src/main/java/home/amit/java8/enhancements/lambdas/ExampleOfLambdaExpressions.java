@@ -14,9 +14,12 @@ public class ExampleOfLambdaExpressions {
 
     public static void main(String[] args) {
 
-        Runnable r=()->{};
-        Callable callable=()->"Amit";
-        Callable callable2=()->{return "Amit";};
+        Runnable r = () -> {
+        };
+        Callable callable = () -> "Amit";
+        Callable callable2 = () -> {
+            return "Amit";
+        };
 
 
     }

@@ -1,7 +1,6 @@
 package home.amit.java.basic.collections;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MyList<E> extends ArrayList<E> {
 

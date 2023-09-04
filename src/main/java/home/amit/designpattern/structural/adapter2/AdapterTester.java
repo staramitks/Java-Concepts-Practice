@@ -1,4 +1,5 @@
 package home.amit.designpattern.structural.adapter2;
+
 /*
  * 
  * The Adapter pattern converts the interface of a class into  another interce the client
@@ -20,26 +21,25 @@ java.io.OutputStreamWriter(OutputStream) (returns a Writer)
  * 
  */
 public class AdapterTester {
-	
-	public static void main (String args[])
-	{
-		Duck duck= new MallardDuck();
-		Turkey turkey= new WildTurkey();
-		
-		System.out.println("Turkey Says...");
-		turkey.gobble();
-		turkey.fly();
-		
-		
-		System.out.println("Duck Says....");
-		duck.quack();;
-		duck.fly();
-		
-		System.err.println("Adapter duck says..");
-		Duck adapter= new TurkeyAdapter(turkey);
-		adapter.fly();
-		adapter.quack();
-		
-	}
+
+    public static void main(String[] args) {
+        Duck duck = new MallardDuck();
+        Turkey turkey = new WildTurkey();
+
+        System.out.println("Turkey Says...");
+        turkey.gobble();
+        turkey.fly();
+
+
+        System.out.println("Duck Says....");
+        duck.quack();
+        duck.fly();
+
+        System.err.println("Adapter duck says..");
+        Duck adapter = new TurkeyAdapter(turkey);
+        adapter.fly();
+        adapter.quack();
+
+    }
 
 }

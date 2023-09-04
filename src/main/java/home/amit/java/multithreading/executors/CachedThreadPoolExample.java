@@ -57,8 +57,7 @@ public class CachedThreadPoolExample {
         executorService.submit(task3);
 
         executorService.shutdown();
-        if (executorService.awaitTermination(10, TimeUnit.MINUTES))
-        {
+        if (executorService.awaitTermination(10, TimeUnit.MINUTES)) {
             System.out.println("Executor finished");
         }
 

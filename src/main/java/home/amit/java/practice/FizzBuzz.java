@@ -10,8 +10,7 @@ import java.util.stream.IntStream;
 
 public class FizzBuzz {
 
-    public void printFizzBuzzJava8()
-    {
+    public void printFizzBuzzJava8() {
 
         IntStream.rangeClosed(1, 100)
                 .mapToObj(i -> i % 15 == 0 ? "FizzBuzz" :
@@ -22,31 +21,20 @@ public class FizzBuzz {
     }
 
 
-    public void print()
-    {
+    public void print() {
 
-        for (int i=1; i<=100; i++)
-        {
-            if (i%15 ==0 )
-            {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 15 == 0) {
                 System.out.println("FizzBuzz");
-            }
-            else if (i%3 ==0 )
-            {
+            } else if (i % 3 == 0) {
                 System.out.println("Fizz");
-            }
-            else if (i%5 ==0 )
-            {
+            } else if (i % 5 == 0) {
                 System.out.println("Buzz");
-            }
-            else
-            {
+            } else {
                 System.out.println(i);
             }
 
         }
-
-
 
 
     }
@@ -54,7 +42,7 @@ public class FizzBuzz {
 
     public static void main(String[] args) {
 
-        FizzBuzz fizzBuzz= new FizzBuzz();
+        FizzBuzz fizzBuzz = new FizzBuzz();
         fizzBuzz.printFizzBuzzJava8();
         fizzBuzz.print();
 

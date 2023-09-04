@@ -17,13 +17,12 @@ import java.util.stream.Collectors;
 
 public class UsingLambdaAsFunctionArgument {
     public static void main(String[] args) {
-        List<Employee> list= DataProvider.getEmployees();
+        List<Employee> list = DataProvider.getEmployees();
         final List<Employee> collect = list.stream().filter(e -> e.getSalary() > 20000).collect(Collectors.toList());
         System.out.println(collect);
 
 
     }
-
 
 
 }

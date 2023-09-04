@@ -8,14 +8,14 @@ Year :- 2023
 
 public class QuantityRestriction implements Restriction {
 
-    private int qty;
-    public QuantityRestriction(int qty)
-    {
-        this.qty=qty;
+    private final int qty;
+
+    public QuantityRestriction(int qty) {
+        this.qty = qty;
     }
 
     @Override
     public boolean isValid(String product, int boughtQty) {
-     return boughtQty<=this.qty;
-  }
+        return boughtQty <= this.qty;
+    }
 }

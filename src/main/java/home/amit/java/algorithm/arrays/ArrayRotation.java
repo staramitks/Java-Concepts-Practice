@@ -6,8 +6,6 @@ Time :- 10:09 PM
 Year :- 2023
 */
 
-import java.util.Arrays;
-
 public class ArrayRotation {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};

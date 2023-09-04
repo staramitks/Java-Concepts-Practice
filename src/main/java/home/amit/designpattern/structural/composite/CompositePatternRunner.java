@@ -9,17 +9,17 @@ Year :- 2023
 public class CompositePatternRunner {
     public static void main(String[] args) {
 
-        EmployeeComposite CEO = new EmployeeComposite("John","CEO", 30000);
+        EmployeeComposite CEO = new EmployeeComposite("John", "CEO", 30000);
 
-        EmployeeComposite headSales = new EmployeeComposite("Robert","Head Sales", 20000);
+        EmployeeComposite headSales = new EmployeeComposite("Robert", "Head Sales", 20000);
 
-        EmployeeComposite headMarketing = new EmployeeComposite("Michel","Head Marketing", 20000);
+        EmployeeComposite headMarketing = new EmployeeComposite("Michel", "Head Marketing", 20000);
 
-        EmployeeComposite clerk1 = new EmployeeComposite("Laura","Marketing", 10000);
-        EmployeeComposite clerk2 = new EmployeeComposite("Bob","Marketing", 10000);
+        EmployeeComposite clerk1 = new EmployeeComposite("Laura", "Marketing", 10000);
+        EmployeeComposite clerk2 = new EmployeeComposite("Bob", "Marketing", 10000);
 
-        EmployeeComposite salesExecutive1 = new EmployeeComposite("Richard","Sales", 10000);
-        EmployeeComposite salesExecutive2 = new EmployeeComposite("Rob","Sales", 10000);
+        EmployeeComposite salesExecutive1 = new EmployeeComposite("Richard", "Sales", 10000);
+        EmployeeComposite salesExecutive2 = new EmployeeComposite("Rob", "Sales", 10000);
 
         CEO.add(headSales);
         CEO.add(headMarketing);
@@ -33,9 +33,9 @@ public class CompositePatternRunner {
         //print all employees of the organization
         System.out.println(CEO);
 
-        CEO.getSubOrdinates().stream().forEach(e->{
+        CEO.getSubOrdinates().stream().forEach(e -> {
             System.out.println(e);
-            e.getSubOrdinates().stream().forEach(s-> System.out.println(s));
+            e.getSubOrdinates().stream().forEach(s -> System.out.println(s));
         });
 
     }

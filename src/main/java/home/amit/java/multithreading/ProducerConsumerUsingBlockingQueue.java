@@ -32,7 +32,7 @@ class Producer implements Runnable {
 
     @Override
     public void run() {
-         for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             try {
                 sharedQ.put(i);
                 Thread.sleep(500);
@@ -58,7 +58,7 @@ class Consumer2 implements Runnable {
     public void run() {
 
         for (int i = 0; i < 10; i++) {
-         try {
+            try {
                 i = sharedQ.take();
                 System.out.println("Consuming " + i);
                 Thread.sleep(500);

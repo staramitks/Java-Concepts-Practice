@@ -24,11 +24,11 @@ public class StreamFilterExample {
 
 
         //List<String> secondList=myList.stream().filter(s -> true).map(s ->s.toUpperCase()).collect(Collectors.toList());
-        List<String> secondList=myList.stream().map(s ->s.toUpperCase()).collect(Collectors.toList());
+        List<String> secondList = myList.stream().map(s -> s.toUpperCase()).collect(Collectors.toList());
         System.out.println(secondList);
     }
 
-    }
+}
 
 
 
