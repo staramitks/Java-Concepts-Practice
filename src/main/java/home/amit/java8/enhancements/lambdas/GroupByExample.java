@@ -22,7 +22,7 @@ public class GroupByExample {
 
 
         System.out.println("Parallel Stream");
-        Map<String, List<EmployeeDTO>> cityGroupConcurrentMap = employeesList.parallelStream().collect(Collectors.groupingByConcurrent(EmployeeDTO::getCity));
+        Map<String, List<EmployeeDTO>> cityGroupConcurrentMap = employeesList.parallelStream().collect(Collectors.groupingBy(EmployeeDTO::getCity));
         cityGroupConcurrentMap.keySet().stream().forEach(System.out::println);
 
         System.out.println("Grouping by average age");
