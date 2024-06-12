@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 // To stream numbers from a stream
@@ -57,6 +58,8 @@ public class StreamingData {
 
         Map<Boolean, List<Integer>> collect = listNos.stream().collect(Collectors.partitioningBy(n -> n % 2 == 0));
         System.out.println(collect);
+
+        List<Integer> intStream= IntStream.range(0,101).boxed().collect(Collectors.toList());
 
     }
 }

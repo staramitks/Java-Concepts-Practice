@@ -36,6 +36,14 @@
     </dependency>
 
 
+    <!-- https://mvnrepository.com/artifact/com.atlassian.hazelcast/hazelcast-micrometer -->
+<!--    <dependency>-->
+<!--      <groupId>com.atlassian.hazelcast</groupId>-->
+<!--      <artifactId>hazelcast-micrometer</artifactId>-->
+<!--      <version>1.5.0</version>-->
+<!--    </dependency>-->
+
+
     <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
