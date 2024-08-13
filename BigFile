@@ -1,0 +1,18 @@
+ String filePath = "largebinaryfile.bin";
+        long numberOfChunks = 10000000L; // Number of chunks to write
+        byte[] chunkContent = "This is a chunk of data.\n".getBytes(StandardCharsets.UTF_8); // Example chunk content
+
+        try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(filePath))) {
+            for (long i = 0; i < numberOfChunks; i++) {
+                bos.write(chunkContent);
+
+                // Optionally flush periodically to free up memory
+                if (i % 100000 == 0) {
+                    bos.flush();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("File creation completed.");
