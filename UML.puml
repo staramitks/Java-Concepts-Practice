@@ -1,0 +1,34 @@
+@startuml
+class ApiController {
+    +sendRequest(requestData: Request) : Response
+    +checkStatus(requestId: String) : StatusResponse
+    +downloadFile(requestId: String) : File
+}
+
+class KafkaProducer {
+    +sendToKafka(requestData: Request) : void
+}
+
+class KafkaConsumer {
+    +processMessage(kafkaMessage: Message) : void
+}
+
+class FileService {
+    +generateFile(data: ProcessedData) : File
+}
+
+class DatabaseService {
+    +saveFile(file: File) : void
+    +updateStatus(requestId: String, status: String) : void
+    +getStatus(requestId: String) : StatusResponse
+    +getFile(requestId: String) : File
+}
+
+ApiController --> KafkaProducer : Sends request to Kafka
+KafkaProducer --> KafkaConsumer : Publishes messages
+KafkaConsumer --> FileService : Processes data & generates file
+FileService --> DatabaseService : Saves file in DB
+KafkaConsumer --> DatabaseService : Updates request status
+ApiController --> DatabaseService : Fetches status & file
+
+@enduml
